@@ -4,6 +4,9 @@
  */
 package sterowanie;
 
+import Controllers.Controller;
+import Controllers.Key;
+import gui.ImageModel;
 import gui.Okno;
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -12,8 +15,7 @@ import java.awt.KeyboardFocusManager;
 import javax.swing.JTextArea;
 import wirtualnakamera.Scena;
 import wirtualnakamera.TestowaScena;
-import wirtualnakamera.WirtualnaKamera;
-import zaslanianie.TablicaKrawedzi;
+import wirtualnakamera.VirtualCamera;
 
 /**
  *
@@ -29,9 +31,10 @@ public class Main {
 
     public static void main(String Args[]) {
         gui.Okno okno = new Okno("Wirtualna kamera");
-        gui.Klawisze2 klawisze = new gui.Klawisze2();
+        Key key = new Key();
+        //gui.Klawisze2 klawisze = new gui.Klawisze2();
         
-        KeyboardFocusManager.getCurrentKeyboardFocusManager().addKeyEventDispatcher(klawisze);
+        KeyboardFocusManager.getCurrentKeyboardFocusManager().addKeyEventDispatcher(key);
         
         
         
@@ -49,14 +52,14 @@ public class Main {
         Scena scena = TestowaScena.stworzScene();
 //        System.out.println(scena.toString());
 
-        WirtualnaKamera wk = new WirtualnaKamera(scena, POCZATKOWA_ODLEGLOSC_RZUTOWANIA, WYSOKOSC_OBRAZU, SZEROKOSC_OBRAZU);
+        VirtualCamera wk = new VirtualCamera(scena, POCZATKOWA_ODLEGLOSC_RZUTOWANIA, WYSOKOSC_OBRAZU, SZEROKOSC_OBRAZU);
         wk.przetworzScene();
         
         //TablicaKrawedzi tabkrw = new TablicaKrawedzi(wk.getKrawedzieDoNarysowania(), WYSOKOSC_OBRAZU);
         //System.out.println(tabkrw.lista);
 
 
-        gui.PanelNaRysunek rys = new gui.PanelNaRysunek(kolorTla, kolorLinii, SZEROKOSC_OBRAZU, WYSOKOSC_OBRAZU, wk.getKrawedzieDoNarysowania());
+        ImageModel rys = new ImageModel(kolorTla, kolorLinii, SZEROKOSC_OBRAZU, WYSOKOSC_OBRAZU, wk.getKrawedzieDoNarysowania());
         rys.setSize(SZEROKOSC_OBRAZU, WYSOKOSC_OBRAZU);
         
         JTextArea text= new JTextArea(instrukcja);
@@ -69,8 +72,8 @@ public class Main {
         okno.getContentPane().add(rys, BorderLayout.CENTER);
         rys.init();
 
-        Kontroler kontroler = new Kontroler(rys, wk);
-        klawisze.setKontroler(kontroler);
+        Controller kontroler = new Controller(rys, wk);
+        key.setController(kontroler);
         
         
 
@@ -79,8 +82,8 @@ public class Main {
         okno.setVisible(true);
 
 
-        //Kontroler.przetworzINarysujRysunek(rys, wk);
-        kontroler.narysujRysunek();
+        //Controller.przetworzINarysujRysunek(rys, wk);
+        kontroler.draw();
 
 
     }

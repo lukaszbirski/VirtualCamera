@@ -54,8 +54,8 @@ public class Punkt3D extends Punkt2D {
         this.w = this.w / this.w;
     }
 
-    void przemnozPrzezMacierzINormalizuj(Macierz mac) {
-        double[][] wsp = Macierz.multiply(mac.macierz, this.wektorWsp());
+    void przemnozPrzezMacierzINormalizuj(Matrix mac) {
+        double[][] wsp = Matrix.multiply(mac.matrix, this.wektorWsp());
         this.noweWspolrzedne(wsp[0][0], wsp[1][0], wsp[2][0], wsp[3][0]);
         this.normalizuj();
     }

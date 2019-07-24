@@ -18,7 +18,7 @@ import wirtualnakamera.Krawedz2D;
  *
  * @author rafal
  */
-public class PanelNaRysunek extends JPanel {
+public class ImageModel extends JPanel {
 
     Color kolorTla;
     Color kolorLinii;
@@ -28,7 +28,7 @@ public class PanelNaRysunek extends JPanel {
     BufferedImage bufor;
     boolean rysujBufor = true;  
 
-    public PanelNaRysunek(Color kolorTla, Color kolorLinii, int szerokosc, int wysokosc, ArrayList<Krawedz2D> krawedzieDoNarysowania) throws HeadlessException {
+    public ImageModel(Color kolorTla, Color kolorLinii, int szerokosc, int wysokosc, ArrayList<Krawedz2D> krawedzieDoNarysowania) throws HeadlessException {
         this.kolorTla = kolorTla;
         this.kolorLinii = kolorLinii;
         this.szerokosc = szerokosc;

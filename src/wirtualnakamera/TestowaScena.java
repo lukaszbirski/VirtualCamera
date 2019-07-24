@@ -56,7 +56,7 @@ public class TestowaScena {
     Krawedz3D l2 = new Krawedz3D(new Punkt3D(-40, -10, 35), new Punkt3D(-40, 30, 35));
     
     */
-    Macierz macierz;
+    Matrix macierz;
 
     public TestowaScena() {
         krawedzie = new ArrayList<Krawedz3D>();
@@ -104,14 +104,14 @@ public class TestowaScena {
         krawedzie.add(l2);
 */
         
-        macierz = new Macierz(Macierz.macierzJedynkowa());
+        macierz = new Matrix(Matrix.identityMatrix());
         
         
     }
 
     public static Scena stworzScene() {
         ArrayList<Krawedz3D> krawedzie = new ArrayList<Krawedz3D>();
-        Macierz macierz = new Macierz(Macierz.macierzJedynkowa());
+        Matrix macierz = new Matrix(Matrix.identityMatrix());
         Scena scena = new Scena(krawedzie, macierz);
         scena.dodajNowyProstopadloscian(-40, -10, 145, -30, 20, 150, Color.BLUE);
         scena.dodajNowyProstopadloscian(-40, -10, 160, -30, 30, 170, Color.CYAN);

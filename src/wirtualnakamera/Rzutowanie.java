@@ -4,7 +4,6 @@
  */
 package wirtualnakamera;
 
-import java.awt.Color;
 import java.util.ArrayList;
 
 /**
@@ -13,7 +12,7 @@ import java.util.ArrayList;
  */
 public class Rzutowanie {
     double d;
-    Macierz macierz;
+    Matrix macierz;
     double z_min = 0.1;
 
     
@@ -21,12 +20,12 @@ public class Rzutowanie {
 
     public Rzutowanie(double d) {
         this.d = d;
-        macierz = new Macierz(Macierz.macierzRzutowania(d));
-        //macierz = new Macierz(Macierz.macierzPp(d,z_min));        
+        macierz = new Matrix(Matrix.projectionMatrix(d));
+        //macierz = new Matrix(Matrix.macierzPp(d,z_min));
     }
     
 //    Punkt3D rzutuj_punkt(Punkt3D p) {
-//        double[][] wsp = Macierz.multiply(this.macierz.macierz, p.wektorWsp());
+//        double[][] wsp = Matrix.multiply(this.macierz.macierz, p.wektorWsp());
 //        Punkt3D pkt = new Punkt3D(wsp[0][0], wsp[1][0], wsp[2][0], wsp[3][0]);
 //        pkt.normalizuj();
 //        return pkt;

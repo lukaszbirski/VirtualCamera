@@ -14,14 +14,14 @@ import java.util.ArrayList;
 public class Scena {
     ArrayList<Krawedz3D> krawedzie;
     ArrayList<Sciana> sciany;
-    Macierz macierz;
-    WirtualnaKamera wk;
+    Matrix matrix;
+    VirtualCamera wk;
     int numerOstatniejSciany;
     
 
-    public Scena(ArrayList<Krawedz3D> krawedzie, Macierz macierz) {
+    public Scena(ArrayList<Krawedz3D> krawedzie, Matrix matrix) {
         this.krawedzie = krawedzie;
-        this.macierz = macierz;
+        this.matrix = matrix;
         numerOstatniejSciany = 0;
         sciany = new ArrayList<Sciana>();
     }
