@@ -6,6 +6,8 @@ package wirtualnakamera;
 
 import java.awt.Color;
 import java.util.ArrayList;
+
+import Models.Point3D;
 import zaslanianie.Algorytm;
 import zaslanianie.BuforEkranu;
 

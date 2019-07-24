@@ -1,6 +1,7 @@
-package wirtualnakamera;
+package Models;
 
 import Models.Point2D;
+import wirtualnakamera.Matrix;
 
 /**Klasa zawiera definicje punktu w przestrzeni 3D*/
 public class Point3D extends Point2D {
@@ -42,24 +43,11 @@ public class Point3D extends Point2D {
     }
 
     /**Metoda normalizuje punkt w 3D*/
-    void normalization() {
+    public void normalization() {
         this.x = this.x / this.w;
         this.y = this.y / this.w;
         this.z = this.z / this.w;
         this.w = this.w / this.w;
-    }
-
-    void multiplicationByNormalizationMatrix(Matrix mtx) {
-        double[][] coord = Matrix.multiply(mtx.matrix, this.tmpVector());
-        this.newCoordinates(coord[0][0], coord[1][0], coord[2][0], coord[3][0]);
-        this.normalization();
-    }
-    
-    public void newCoordinates(double x, double y, double z, double w) {
-        this.x = x;
-        this.y = y;
-        this.z = z;
-        this.w = w;
     }
 
     @Override

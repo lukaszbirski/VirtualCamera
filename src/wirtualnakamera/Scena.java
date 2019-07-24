@@ -4,6 +4,8 @@
  */
 package wirtualnakamera;
 
+import Models.Point3D;
+
 import java.awt.Color;
 import java.util.ArrayList;
 

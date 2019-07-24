@@ -4,6 +4,8 @@
  */
 package wirtualnakamera;
 
+import Models.Point3D;
+
 /**
  *
  * @author rafal

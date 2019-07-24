@@ -1,33 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d78a5b79-bab2-4f68-97bf-007366d13633" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/gui/ImageModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/gui/ImageModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/wirtualnakamera/Kamera.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/wirtualnakamera/Kamera.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/wirtualnakamera/Krawedz2D.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/wirtualnakamera/Krawedz2D.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/wirtualnakamera/Krawedz3D.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/wirtualnakamera/Krawedz3D.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/wirtualnakamera/Punkt2D.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/wirtualnakamera/Punkt3D.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/wirtualnakamera/Rzutowanie.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/wirtualnakamera/Rzutowanie.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/wirtualnakamera/Scena.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/wirtualnakamera/Scena.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/wirtualnakamera/Sciana.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/wirtualnakamera/Sciana.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/wirtualnakamera/VirtualCamera.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/wirtualnakamera/VirtualCamera.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/wirtualnakamera/Widok.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/wirtualnakamera/Widok.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/zaslanianie/TablicaKrawedzi$Krawedz.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/zaslanianie/TablicaKrawedzi$Krawedz.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/zaslanianie/TablicaKrawedzi.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/zaslanianie/TablicaKrawedzi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/wirtualnakamera/Kamera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/wirtualnakamera/Kamera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/wirtualnakamera/Krawedz2D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/wirtualnakamera/Krawedz2D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/wirtualnakamera/Krawedz3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/wirtualnakamera/Krawedz3D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/wirtualnakamera/Punkt2D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Point2D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/wirtualnakamera/Punkt3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/wirtualnakamera/Point3D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/wirtualnakamera/Rzutowanie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/wirtualnakamera/Rzutowanie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/wirtualnakamera/Scena.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/wirtualnakamera/Scena.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/wirtualnakamera/Sciana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/wirtualnakamera/Sciana.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/wirtualnakamera/TestowaScena.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/wirtualnakamera/TestowaScena.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/wirtualnakamera/VirtualCamera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/wirtualnakamera/VirtualCamera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/wirtualnakamera/Widok.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/wirtualnakamera/Widok.java" afterDir="false" />
-    </list>
+    <list default="true" id="d78a5b79-bab2-4f68-97bf-007366d13633" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,12 +28,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/wirtualnakamera/Point3D.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="44" column="15" selection-start-line="44" selection-start-column="15" selection-end-line="44" selection-end-column="15" />
+            <state relative-caret-position="493">
+              <caret line="52" column="51" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="e#1532#1533#0" expanded="true" />
                 <element signature="e#1628#1629#0" expanded="true" />
               </folding>
@@ -70,12 +45,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/wirtualnakamera/Matrix.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="11" column="41" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="41" />
+            <state relative-caret-position="370">
+              <caret line="112" column="5" selection-start-line="112" selection-start-column="5" selection-end-line="112" selection-end-column="5" />
               <folding>
                 <element signature="e#110#111#0" expanded="true" />
                 <element signature="e#146#147#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/wirtualnakamera/TestowaScena.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="376">
+              <caret line="124" column="15" selection-start-line="124" selection-start-column="15" selection-end-line="124" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -115,6 +99,7 @@
         <option value="$PROJECT_DIR$/src/Models/Point2D.java" />
         <option value="$PROJECT_DIR$/src/wirtualnakamera/VirtualCamera.java" />
         <option value="$PROJECT_DIR$/src/wirtualnakamera/Point3D.java" />
+        <option value="$PROJECT_DIR$/src/Models/Point3D.java" />
       </list>
     </option>
   </component>
@@ -347,13 +332,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/wirtualnakamera/TestowaScena.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1853">
-          <caret line="113" column="57" selection-start-line="113" selection-start-column="57" selection-end-line="113" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/wirtualnakamera/Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -386,10 +364,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/wirtualnakamera/Point3D.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="52" column="51" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1532#1533#0" expanded="true" />
+            <element signature="e#1628#1629#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/wirtualnakamera/Matrix.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="11" column="41" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="41" />
+        <state relative-caret-position="370">
+          <caret line="112" column="5" selection-start-line="112" selection-start-column="5" selection-end-line="112" selection-end-column="5" />
           <folding>
             <element signature="e#110#111#0" expanded="true" />
             <element signature="e#146#147#0" expanded="true" />
@@ -397,14 +387,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/wirtualnakamera/Point3D.java">
+    <entry file="file://$PROJECT_DIR$/src/wirtualnakamera/TestowaScena.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="44" column="15" selection-start-line="44" selection-start-column="15" selection-end-line="44" selection-end-column="15" />
-          <folding>
-            <element signature="e#1532#1533#0" expanded="true" />
-            <element signature="e#1628#1629#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="376">
+          <caret line="124" column="15" selection-start-line="124" selection-start-column="15" selection-end-line="124" selection-end-column="15" />
         </state>
       </provider>
     </entry>

@@ -5,6 +5,7 @@
 package wirtualnakamera;
 
 import Models.Point2D;
+import Models.Point3D;
 
 import java.util.ArrayList;
 
