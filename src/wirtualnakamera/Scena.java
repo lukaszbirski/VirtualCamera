@@ -28,14 +28,14 @@ public class Scena {
 
     public ArrayList<Krawedz3D> nowyProstopadloscian(double minX, double minY, double minZ, double maxX, double maxY, double maxZ, Color kolor) {
         ArrayList<Krawedz3D> krawedzie = new ArrayList<Krawedz3D>();
-        Punkt3D pkt1 = new Punkt3D(minX, minY, minZ);
-        Punkt3D pkt2 = new Punkt3D(maxX, minY, minZ);
-        Punkt3D pkt3 = new Punkt3D(maxX, minY, maxZ);
-        Punkt3D pkt4 = new Punkt3D(minX, minY, maxZ);
-        Punkt3D pkt5 = new Punkt3D(minX, maxY, minZ);
-        Punkt3D pkt6 = new Punkt3D(maxX, maxY, minZ);
-        Punkt3D pkt7 = new Punkt3D(maxX, maxY, maxZ);
-        Punkt3D pkt8 = new Punkt3D(minX, maxY, maxZ);
+        Point3D pkt1 = new Point3D(minX, minY, minZ);
+        Point3D pkt2 = new Point3D(maxX, minY, minZ);
+        Point3D pkt3 = new Point3D(maxX, minY, maxZ);
+        Point3D pkt4 = new Point3D(minX, minY, maxZ);
+        Point3D pkt5 = new Point3D(minX, maxY, minZ);
+        Point3D pkt6 = new Point3D(maxX, maxY, minZ);
+        Point3D pkt7 = new Point3D(maxX, maxY, maxZ);
+        Point3D pkt8 = new Point3D(minX, maxY, maxZ);
         
         //sciany maja punkty zorientowane zgodnie z ruchem wskazowek zegara
         //normalne scian sa skierowane na zewnatrz bryly
@@ -107,21 +107,21 @@ public class Scena {
         
         
         /*
-        krawedzie.add(new Krawedz3D(new Punkt3D(minX, minY, minZ), new Punkt3D(maxX, minY, minZ) )); //a
-        krawedzie.add(new Krawedz3D(new Punkt3D(maxX, minY, minZ), new Punkt3D(maxX, minY, maxZ) )); //b
-        krawedzie.add(new Krawedz3D(new Punkt3D(minX, minY, maxZ), new Punkt3D(maxX, minY, maxZ))); //c
-        krawedzie.add(new Krawedz3D(new Punkt3D(minX, minY, minZ), new Punkt3D(minX, minY, maxZ))); //d
+        krawedzie.add(new Krawedz3D(new Point3D(minX, minY, minZ), new Point3D(maxX, minY, minZ) )); //a
+        krawedzie.add(new Krawedz3D(new Point3D(maxX, minY, minZ), new Point3D(maxX, minY, maxZ) )); //b
+        krawedzie.add(new Krawedz3D(new Point3D(minX, minY, maxZ), new Point3D(maxX, minY, maxZ))); //c
+        krawedzie.add(new Krawedz3D(new Point3D(minX, minY, minZ), new Point3D(minX, minY, maxZ))); //d
 
         
-        krawedzie.add(new Krawedz3D(new Punkt3D(minX, maxY, minZ), new Punkt3D(maxX, maxY, minZ))); //e
-        krawedzie.add(new Krawedz3D(new Punkt3D(maxX, maxY, minZ), new Punkt3D(maxX, maxY, maxZ))); //f
-        krawedzie.add(new Krawedz3D(new Punkt3D(minX, maxY, maxZ), new Punkt3D(maxX, maxY, maxZ))); //g
-        krawedzie.add(new Krawedz3D(new Punkt3D(minX, maxY, minZ), new Punkt3D(minX, maxY, maxZ))); //h
+        krawedzie.add(new Krawedz3D(new Point3D(minX, maxY, minZ), new Point3D(maxX, maxY, minZ))); //e
+        krawedzie.add(new Krawedz3D(new Point3D(maxX, maxY, minZ), new Point3D(maxX, maxY, maxZ))); //f
+        krawedzie.add(new Krawedz3D(new Point3D(minX, maxY, maxZ), new Point3D(maxX, maxY, maxZ))); //g
+        krawedzie.add(new Krawedz3D(new Point3D(minX, maxY, minZ), new Point3D(minX, maxY, maxZ))); //h
         
-        krawedzie.add(new Krawedz3D(new Punkt3D(minX, minY, minZ), new Punkt3D(minX, maxY, minZ))); //i
-        krawedzie.add(new Krawedz3D(new Punkt3D(maxX, minY, minZ), new Punkt3D(maxX, maxY, minZ))); //j
-        krawedzie.add(new Krawedz3D(new Punkt3D(maxX, minY, maxZ), new Punkt3D(maxX, maxY, maxZ))); //k
-        krawedzie.add(new Krawedz3D(new Punkt3D(minX, minY, maxZ), new Punkt3D(minX, maxY, maxZ))); //l
+        krawedzie.add(new Krawedz3D(new Point3D(minX, minY, minZ), new Point3D(minX, maxY, minZ))); //i
+        krawedzie.add(new Krawedz3D(new Point3D(maxX, minY, minZ), new Point3D(maxX, maxY, minZ))); //j
+        krawedzie.add(new Krawedz3D(new Point3D(maxX, minY, maxZ), new Point3D(maxX, maxY, maxZ))); //k
+        krawedzie.add(new Krawedz3D(new Point3D(minX, minY, maxZ), new Point3D(minX, maxY, maxZ))); //l
         */
         
         return krawedzie;

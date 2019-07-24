@@ -4,6 +4,8 @@
  */
 package wirtualnakamera;
 
+import Models.Point2D;
+
 import java.util.ArrayList;
 
 /**
@@ -35,12 +37,12 @@ public class Widok {
     }
     
 
-    Punkt2D przesunPunktDoWidoku(Punkt3D p) {
+    Point2D przesunPunktDoWidoku(Point3D p) {
 //        System.out.println(p.x + "\t" + p.y);
         int x = (int) ((p.x - kamera.x_min) * szerokosc / (kamera.x_max - kamera.x_min));
 //        int y = (int) ((p.y - kamera.y_min) * wysokosc / (kamera.y_max - kamera.y_min));    //zamienic wsp - os oy w druga strone
         int y = wysokosc - ((int) ((p.y - kamera.y_min) * wysokosc / (kamera.y_max - kamera.y_min)));   //zamienione
-        return new Punkt2D(x, y, p.z);        
+        return new Point2D(x, y, p.z);
     }
     
     Krawedz2D przesunKrawedzDoWidoku(Krawedz3D kr) {

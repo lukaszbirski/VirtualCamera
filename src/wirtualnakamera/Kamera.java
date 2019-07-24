@@ -58,7 +58,7 @@ public class Kamera {
     }
 
     
-    private boolean czyPunktJestNaKamerze(Punkt3D p) {
+    private boolean czyPunktJestNaKamerze(Point3D p) {
         if (p.x >= x_min && p.x <= x_max && p.y >= y_min && p.y <= y_max) {
             return true;
         }

@@ -5,7 +5,6 @@
 package wirtualnakamera;
 
 import java.awt.Color;
-import java.util.ArrayList;
 
 /**
  *
@@ -13,10 +12,10 @@ import java.util.ArrayList;
  */
 public class Sciana {
 
-    public Punkt3D pkt1;
-    public Punkt3D pkt2;
-    public Punkt3D pkt3;
-    public Punkt3D pkt4;
+    public Point3D pkt1;
+    public Point3D pkt2;
+    public Point3D pkt3;
+    public Point3D pkt4;
     public Color kolor;
     public Krawedz3D krawedz1;
     public Krawedz3D krawedz2;
@@ -27,7 +26,7 @@ public class Sciana {
     public double C;        //zawierajacej
     public double D;        //te sciane
 
-    public Sciana(Punkt3D pkt1, Punkt3D pkt2, Punkt3D pkt3, Punkt3D pkt4, Color kolor) {
+    public Sciana(Point3D pkt1, Point3D pkt2, Point3D pkt3, Point3D pkt4, Color kolor) {
         this.pkt1 = pkt1;
         this.pkt2 = pkt2;
         this.pkt3 = pkt3;

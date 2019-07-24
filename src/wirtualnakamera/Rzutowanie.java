@@ -24,16 +24,16 @@ public class Rzutowanie {
         //macierz = new Matrix(Matrix.macierzPp(d,z_min));
     }
     
-//    Punkt3D rzutuj_punkt(Punkt3D p) {
+//    Point3D rzutuj_punkt(Point3D p) {
 //        double[][] wsp = Matrix.multiply(this.macierz.macierz, p.wektorWsp());
-//        Punkt3D pkt = new Punkt3D(wsp[0][0], wsp[1][0], wsp[2][0], wsp[3][0]);
+//        Point3D pkt = new Point3D(wsp[0][0], wsp[1][0], wsp[2][0], wsp[3][0]);
 //        pkt.normalizuj();
 //        return pkt;
 //        
 //    } 
     
-    Punkt3D rzutuj_punkt(Punkt3D p) {
-        Punkt3D pkt = new Punkt3D(p.x * this.d / p.z, p.y * this.d / p.z, this.d);
+    Point3D rzutuj_punkt(Point3D p) {
+        Point3D pkt = new Point3D(p.x * this.d / p.z, p.y * this.d / p.z, this.d);
         return pkt;
     }
     

@@ -47,8 +47,8 @@ public class VirtualCamera {
 //        ArrayList<Krawedz3D> krawedzie = new ArrayList<Krawedz3D>();
 //        for (Krawedz3D kr : scena.krawedzie) {
 //
-//            Punkt3D pkt1 = new Punkt3D(Matrix.multiply(scena.macierz.macierz, kr.punkt1.wektorWsp()));
-//            Punkt3D pkt2 = new Punkt3D(Matrix.multiply(scena.macierz.macierz, kr.punkt2.wektorWsp()));
+//            Point3D pkt1 = new Point3D(Matrix.multiply(scena.macierz.macierz, kr.punkt1.wektorWsp()));
+//            Point3D pkt2 = new Point3D(Matrix.multiply(scena.macierz.macierz, kr.punkt2.wektorWsp()));
 //            pkt1.normalizuj();
 //            pkt2.normalizuj();
 //            Krawedz3D krw = new Krawedz3D(pkt1, pkt2, kr.nr_sciany1, kr.nr_sciany2);
@@ -60,14 +60,14 @@ public class VirtualCamera {
         ArrayList<Sciana> sciany = new ArrayList<Sciana>();
         for (Sciana s : scena.sciany) {         //transformacje scian
 
-            Punkt3D npkt1 = new Punkt3D(Matrix.multiply(scena.matrix.matrix, s.pkt1.wektorWsp()));
-            npkt1.normalizuj();
-            Punkt3D npkt2 = new Punkt3D(Matrix.multiply(scena.matrix.matrix, s.pkt2.wektorWsp()));
-            npkt2.normalizuj();
-            Punkt3D npkt3 = new Punkt3D(Matrix.multiply(scena.matrix.matrix, s.pkt3.wektorWsp()));
-            npkt3.normalizuj();
-            Punkt3D npkt4 = new Punkt3D(Matrix.multiply(scena.matrix.matrix, s.pkt4.wektorWsp()));
-            npkt4.normalizuj();
+            Point3D npkt1 = new Point3D(Matrix.multiply(scena.matrix.matrix, s.pkt1.tmpVector()));
+            npkt1.normalization();
+            Point3D npkt2 = new Point3D(Matrix.multiply(scena.matrix.matrix, s.pkt2.tmpVector()));
+            npkt2.normalization();
+            Point3D npkt3 = new Point3D(Matrix.multiply(scena.matrix.matrix, s.pkt3.tmpVector()));
+            npkt3.normalization();
+            Point3D npkt4 = new Point3D(Matrix.multiply(scena.matrix.matrix, s.pkt4.tmpVector()));
+            npkt4.normalization();
             Sciana ns = new Sciana(npkt1, npkt2, npkt3, npkt4, s.kolor);
             sciany.add(ns);
         }
