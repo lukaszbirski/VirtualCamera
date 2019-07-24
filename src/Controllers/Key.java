@@ -4,6 +4,7 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+/**Klasa służy do przechwytywania naciśnięcia klawiszy*/
 public class Key implements KeyListener, KeyEventDispatcher {
 
     Controller controller;

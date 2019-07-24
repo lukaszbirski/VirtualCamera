@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package gui;
 
 import java.awt.Color;
@@ -14,52 +10,39 @@ import java.util.ArrayList;
 import javax.swing.JPanel;
 import wirtualnakamera.Krawedz2D;
 
-/**
- *
- * @author rafal
- */
 public class ImageModel extends JPanel {
 
-    Color kolorTla;
-    Color kolorLinii;
-    int szerokosc;
-    int wysokosc;
+    Color backgroundColor;
+    Color lineColor;
+    int width;
+    int height;
     public ArrayList<Krawedz2D> krawedzieDoNarysowania;
-    BufferedImage bufor;
+    BufferedImage bufferedImage;
     boolean rysujBufor = true;  
 
-    public ImageModel(Color kolorTla, Color kolorLinii, int szerokosc, int wysokosc, ArrayList<Krawedz2D> krawedzieDoNarysowania) throws HeadlessException {
-        this.kolorTla = kolorTla;
-        this.kolorLinii = kolorLinii;
-        this.szerokosc = szerokosc;
-        this.wysokosc = wysokosc;
+    public ImageModel(Color backgroundColor, Color lineColor, int width, int height, ArrayList<Krawedz2D> krawedzieDoNarysowania) throws HeadlessException {
+        this.backgroundColor = backgroundColor;
+        this.lineColor = lineColor;
+        this.width = width;
+        this.height = height;
         this.krawedzieDoNarysowania = krawedzieDoNarysowania;
         init();
     }
 
     public void init() {
-        setBackground(kolorTla);
-        setForeground(kolorTla);
-
+        setBackground(backgroundColor);
+        setForeground(backgroundColor);
     }
 
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        //      this.repaint();
-
-        //      Graphics2D g2 = (Graphics2D) g;
-        //      g2.setColor(kolorLinii);
-        g.setColor(kolorLinii);
-        
+        g.setColor(lineColor);
         if (rysujBufor) {
             rysujBufor(g);
             rysujKrawedzie(g);
         } else {
             rysujKrawedzie(g);
         }
-        
-        
-        //       sterowanie.Rysuj.rysuj(krawedzieDoNarysowania, kolorLinii, g);
     }
 
     public ArrayList<Krawedz2D> getKrawedzieDoNarysowania() {
@@ -71,9 +54,7 @@ public class ImageModel extends JPanel {
     }
 
     public void rysujKrawedzie(Graphics g) {
- //       Rysuj.rysuj(krawedzieDoNarysowania, kolorTla, g);
         for (Krawedz2D kr : krawedzieDoNarysowania) {
-            
             g.drawLine(kr.punkt1.x, kr.punkt1.y, kr.punkt2.x, kr.punkt2.y);
         }
     }
@@ -83,25 +64,21 @@ public class ImageModel extends JPanel {
         this.repaint();
     }
     
-    public void NarysujBufferedImage(BufferedImage bufimg) {
+    public void NarysujBufferedImage(BufferedImage bufferedImage) {
         this.krawedzieDoNarysowania = new ArrayList<Krawedz2D>();
-//        this.rysujBufor = true;
-        this.bufor  = bufimg;
+        this.bufferedImage  = bufferedImage;
         this.repaint();
         
     }
     
-    
-    
     public void rysujBufor(Graphics g) {
-        g.drawImage(bufor, 0, 0, new ImageObserver() {
+        g.drawImage(bufferedImage, 0, 0, new ImageObserver() {
 
             @Override
             public boolean imageUpdate(Image img, int infoflags, int x, int y, int width, int height) {
                 throw new UnsupportedOperationException("Not supported yet.");
             }
         });
-        //g = bufor.createGraphics();
     }
     
     
