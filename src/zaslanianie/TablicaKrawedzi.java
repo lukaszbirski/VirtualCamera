@@ -6,7 +6,8 @@ package zaslanianie;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import wirtualnakamera.Krawedz2D;
+
+import Models.Edge2D;
 
 /**
  *
@@ -18,15 +19,15 @@ public class TablicaKrawedzi {
     public ArrayList<ArrayList<Krawedz>> lista;
     //ArrayList<Krawedz> [] tablica;
 
-    public TablicaKrawedzi(ArrayList<Krawedz2D> krw, int wysokoscEkranu) {
+    public TablicaKrawedzi(ArrayList<Edge2D> krw, int wysokoscEkranu) {
         lista = new ArrayList<ArrayList<Krawedz>>(wysokoscEkranu);
 
         for (int i = 0 ; i < wysokoscEkranu ; i++) {
             lista.add(new ArrayList<Krawedz>());
         }
 
-        for (Krawedz2D kr : krw) {
-            if (kr.punkt1.y == kr.punkt2.y) {
+        for (Edge2D kr : krw) {
+            if (kr.point1.y == kr.point2.y) {
                 continue;       //ODRZUCANIE poziomych
             }
             Krawedz k = new Krawedz(kr);
@@ -70,27 +71,27 @@ public class TablicaKrawedzi {
         int nr_wielokata1;
         int nr_wielokata2;
         boolean pionowa;
-        Krawedz2D macierzystaKrawedz2D;
+        Edge2D macierzystaKrawedz2D;
 
-        public Krawedz(Krawedz2D kr) {
+        public Krawedz(Edge2D kr) {
             this.macierzystaKrawedz2D = kr;
             pionowa = false;
-            if (kr.punkt1.y < kr.punkt2.y) {
-                x_dolnego = kr.punkt1.x;
-                y_dolnego = kr.punkt1.y;
-                x_gornego = kr.punkt2.x;
-                y_gornego = kr.punkt2.y;
+            if (kr.point1.y < kr.point2.y) {
+                x_dolnego = kr.point1.x;
+                y_dolnego = kr.point1.y;
+                x_gornego = kr.point2.x;
+                y_gornego = kr.point2.y;
                 c = (float) ((float) x_gornego - x_dolnego) / (y_gornego - y_dolnego);
-                nr_wielokata1 = kr.nr_sciany1;
-                nr_wielokata2 = kr.nr_sciany2;
-            } else if (kr.punkt1.y >= kr.punkt2.y) {
-                x_dolnego = kr.punkt2.x;
-                y_dolnego = kr.punkt2.y;
-                x_gornego = kr.punkt1.x;
-                y_gornego = kr.punkt1.y;
+                nr_wielokata1 = kr.wallNumber1;
+                nr_wielokata2 = kr.wallNumber2;
+            } else if (kr.point1.y >= kr.point2.y) {
+                x_dolnego = kr.point2.x;
+                y_dolnego = kr.point2.y;
+                x_gornego = kr.point1.x;
+                y_gornego = kr.point1.y;
                 c = (float) (x_gornego - x_dolnego) / (y_gornego - y_dolnego);
-                nr_wielokata1 = kr.nr_sciany1;
-                nr_wielokata2 = kr.nr_sciany2;
+                nr_wielokata1 = kr.wallNumber1;
+                nr_wielokata2 = kr.wallNumber2;
             }
             if (x_dolnego == x_gornego) {
                pionowa = true;

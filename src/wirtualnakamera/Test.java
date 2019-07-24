@@ -4,6 +4,8 @@
  */
 package wirtualnakamera;
 
+import Models.Edge2D;
+
 /**
  *
  * @author rafal
@@ -46,7 +48,7 @@ public class Test {
         
         Widok widok = new Widok(wysokosc, szerokosc, kam);
         
-        for (Krawedz2D kr : widok.krawedzieNaWidoku) {
+        for (Edge2D kr : widok.krawedzieNaWidoku) {
             System.out.println(kr.toString());
         }
         

@@ -7,6 +7,7 @@ package wirtualnakamera;
 import java.awt.Color;
 import java.util.ArrayList;
 
+import Models.Edge2D;
 import Models.Point3D;
 import zaslanianie.Algorytm;
 import zaslanianie.BuforEkranu;
@@ -100,7 +101,7 @@ public class VirtualCamera {
 
     }
 
-    public ArrayList<Krawedz2D> getKrawedzieDoNarysowania() {
+    public ArrayList<Edge2D> getKrawedzieDoNarysowania() {
         return this.widok.getKrawedzieNaWidoku();
     }
 

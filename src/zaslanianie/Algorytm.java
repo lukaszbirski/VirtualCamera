@@ -7,7 +7,8 @@ package zaslanianie;
 import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
-import wirtualnakamera.Krawedz2D;
+
+import Models.Edge2D;
 import wirtualnakamera.Sciana;
 import wirtualnakamera.Widok;
 import zaslanianie.ListaWielokatow.Wielokat;
@@ -19,7 +20,7 @@ import zaslanianie.TablicaKrawedziAktywnych.AktywnaKrawedz;
  */
 public class Algorytm {
 
-    ArrayList<Krawedz2D> krawedzie;
+    ArrayList<Edge2D> krawedzie;
     ArrayList<Sciana> sciany;
     int wysokosc, szerokosc;
     Color kolorTla;
@@ -29,7 +30,7 @@ public class Algorytm {
     public double d;
     Widok widok;
 
-    public Algorytm(ArrayList<Krawedz2D> krawedzie, ArrayList<Sciana> sciany, int wysokosc, int szerokosc, Color kolorTla, double d, Widok widok) {
+    public Algorytm(ArrayList<Edge2D> krawedzie, ArrayList<Sciana> sciany, int wysokosc, int szerokosc, Color kolorTla, double d, Widok widok) {
         this.krawedzie = krawedzie;
         this.sciany = sciany;
         this.wysokosc = wysokosc;

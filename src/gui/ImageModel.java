@@ -8,7 +8,8 @@ import java.awt.image.BufferedImage;
 import java.awt.image.ImageObserver;
 import java.util.ArrayList;
 import javax.swing.JPanel;
-import wirtualnakamera.Krawedz2D;
+
+import Models.Edge2D;
 
 public class ImageModel extends JPanel {
 
@@ -16,11 +17,11 @@ public class ImageModel extends JPanel {
     Color lineColor;
     int width;
     int height;
-    public ArrayList<Krawedz2D> krawedzieDoNarysowania;
+    public ArrayList<Edge2D> krawedzieDoNarysowania;
     BufferedImage bufferedImage;
     boolean rysujBufor = true;  
 
-    public ImageModel(Color backgroundColor, Color lineColor, int width, int height, ArrayList<Krawedz2D> krawedzieDoNarysowania) throws HeadlessException {
+    public ImageModel(Color backgroundColor, Color lineColor, int width, int height, ArrayList<Edge2D> krawedzieDoNarysowania) throws HeadlessException {
         this.backgroundColor = backgroundColor;
         this.lineColor = lineColor;
         this.width = width;
@@ -45,27 +46,27 @@ public class ImageModel extends JPanel {
         }
     }
 
-    public ArrayList<Krawedz2D> getKrawedzieDoNarysowania() {
+    public ArrayList<Edge2D> getKrawedzieDoNarysowania() {
         return krawedzieDoNarysowania;
     }
 
-    public void setKrawedzieDoNarysowania(ArrayList<Krawedz2D> krawedzieDoNarysowania) {
+    public void setKrawedzieDoNarysowania(ArrayList<Edge2D> krawedzieDoNarysowania) {
         this.krawedzieDoNarysowania = krawedzieDoNarysowania;
     }
 
     public void rysujKrawedzie(Graphics g) {
-        for (Krawedz2D kr : krawedzieDoNarysowania) {
-            g.drawLine(kr.punkt1.x, kr.punkt1.y, kr.punkt2.x, kr.punkt2.y);
+        for (Edge2D kr : krawedzieDoNarysowania) {
+            g.drawLine(kr.point1.x, kr.point1.y, kr.point2.x, kr.point2.y);
         }
     }
     
-    public void NarysujKrawedzieNaRysunku(ArrayList<Krawedz2D> krw) {
+    public void NarysujKrawedzieNaRysunku(ArrayList<Edge2D> krw) {
         this.krawedzieDoNarysowania = krw;
         this.repaint();
     }
     
     public void NarysujBufferedImage(BufferedImage bufferedImage) {
-        this.krawedzieDoNarysowania = new ArrayList<Krawedz2D>();
+        this.krawedzieDoNarysowania = new ArrayList<Edge2D>();
         this.bufferedImage  = bufferedImage;
         this.repaint();
         
