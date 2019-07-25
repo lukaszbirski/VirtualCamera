@@ -5,6 +5,7 @@
 package wirtualnakamera;
 
 import Models.Edge2D;
+import Models.Edge3D;
 import Models.Point2D;
 import Models.Point3D;
 
@@ -31,7 +32,7 @@ public class Widok {
 
 
 
-    public Widok(int wysokosc, int szerokosc, ArrayList<Krawedz3D> krawedzieNaKamerze, Kamera kamera) {
+    public Widok(int wysokosc, int szerokosc, ArrayList<Edge3D> krawedzieNaKamerze, Kamera kamera) {
         this.wysokosc = wysokosc;
         this.szerokosc = szerokosc;
         this.krawedzieNaWidoku = przesunKrawedzieDoWidoku(krawedzieNaKamerze);
@@ -47,14 +48,14 @@ public class Widok {
         return new Point2D(x, y, p.z);
     }
     
-    Edge2D przesunKrawedzDoWidoku(Krawedz3D kr) {
-        return new Edge2D(przesunPunktDoWidoku(kr.punkt1), przesunPunktDoWidoku(kr.punkt2), kr.nr_sciany1, kr.nr_sciany2);
+    Edge2D przesunKrawedzDoWidoku(Edge3D kr) {
+        return new Edge2D(przesunPunktDoWidoku(kr.getPoint1()), przesunPunktDoWidoku(kr.getPoint2()), kr.getWallNumber1(), kr.getWallNumber1());
     }
     
-    ArrayList<Edge2D> przesunKrawedzieDoWidoku(ArrayList<Krawedz3D> krawedzieNaKamerze) {
+    ArrayList<Edge2D> przesunKrawedzieDoWidoku(ArrayList<Edge3D> krawedzieNaKamerze) {
         ArrayList<Edge2D> knw = new ArrayList<Edge2D>();
         
-        for (Krawedz3D kr : krawedzieNaKamerze) {
+        for (Edge3D kr : krawedzieNaKamerze) {
             knw.add(przesunKrawedzDoWidoku(kr));
         }
         return knw;

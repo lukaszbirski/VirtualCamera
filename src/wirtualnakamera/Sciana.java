@@ -4,6 +4,7 @@
  */
 package wirtualnakamera;
 
+import Models.Edge3D;
 import Models.Point3D;
 
 import java.awt.Color;
@@ -19,10 +20,10 @@ public class Sciana {
     public Point3D pkt3;
     public Point3D pkt4;
     public Color kolor;
-    public Krawedz3D krawedz1;
-    public Krawedz3D krawedz2;
-    public Krawedz3D krawedz3;
-    public Krawedz3D krawedz4;
+    public Edge3D krawedz1;
+    public Edge3D krawedz2;
+    public Edge3D krawedz3;
+    public Edge3D krawedz4;
     public double A;        //wspolczynniki 
     public double B;        //rownania plaszczyzny
     public double C;        //zawierajacej
@@ -53,16 +54,16 @@ public class Sciana {
         this.C = x1 * y2 - x1 * y3 - x2 * y1 + x2 * y3 + x3 * y1 - x3 * y2;
         this.D = -x1 * y2 * z3 + x1 * y3 * z2 + x2 * y1 * z3 - x2 * y3 * z1 - x3 * y1 * z2 + x3 * y2 * z1;
         
-        this.krawedz1 = new Krawedz3D(pkt1, pkt2);
-        this.krawedz2 = new Krawedz3D(pkt2, pkt3);
-        this.krawedz3 = new Krawedz3D(pkt3, pkt4);
-        this.krawedz4 = new Krawedz3D(pkt4, pkt1);
+        this.krawedz1 = new Edge3D(pkt1, pkt2);
+        this.krawedz2 = new Edge3D(pkt2, pkt3);
+        this.krawedz3 = new Edge3D(pkt3, pkt4);
+        this.krawedz4 = new Edge3D(pkt4, pkt1);
         
 
     }
 
-//    ArrayList<Krawedz3D> getKrawedzie() {
-//        ArrayList<Krawedz3D> krw = new ArrayList<Krawedz3D>();
+//    ArrayList<Edge3D> getKrawedzie() {
+//        ArrayList<Edge3D> krw = new ArrayList<Edge3D>();
 //        krw.add(krawedz1);
 //        krw.add(krawedz2);
 //        krw.add(krawedz3);

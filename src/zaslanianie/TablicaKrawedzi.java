@@ -27,7 +27,7 @@ public class TablicaKrawedzi {
         }
 
         for (Edge2D kr : krw) {
-            if (kr.point1.y == kr.point2.y) {
+            if (kr.getPoint1().y == kr.getPoint2().y) {
                 continue;       //ODRZUCANIE poziomych
             }
             Krawedz k = new Krawedz(kr);
@@ -76,22 +76,22 @@ public class TablicaKrawedzi {
         public Krawedz(Edge2D kr) {
             this.macierzystaKrawedz2D = kr;
             pionowa = false;
-            if (kr.point1.y < kr.point2.y) {
-                x_dolnego = kr.point1.x;
-                y_dolnego = kr.point1.y;
-                x_gornego = kr.point2.x;
-                y_gornego = kr.point2.y;
+            if (kr.getPoint1().y < kr.getPoint2().y) {
+                x_dolnego = kr.getPoint1().x;
+                y_dolnego = kr.getPoint1().y;
+                x_gornego = kr.getPoint2().x;
+                y_gornego = kr.getPoint2().y;
                 c = (float) ((float) x_gornego - x_dolnego) / (y_gornego - y_dolnego);
-                nr_wielokata1 = kr.wallNumber1;
-                nr_wielokata2 = kr.wallNumber2;
-            } else if (kr.point1.y >= kr.point2.y) {
-                x_dolnego = kr.point2.x;
-                y_dolnego = kr.point2.y;
-                x_gornego = kr.point1.x;
-                y_gornego = kr.point1.y;
+                nr_wielokata1 = kr.getWallNumber1();
+                nr_wielokata2 = kr.getWallNumber2();
+            } else if (kr.getPoint1().y >= kr.getPoint2().y) {
+                x_dolnego = kr.getPoint2().x;
+                y_dolnego = kr.getPoint2().y;
+                x_gornego = kr.getPoint1().x;
+                y_gornego = kr.getPoint1().y;
                 c = (float) (x_gornego - x_dolnego) / (y_gornego - y_dolnego);
-                nr_wielokata1 = kr.wallNumber1;
-                nr_wielokata2 = kr.wallNumber2;
+                nr_wielokata1 = kr.getWallNumber1();
+                nr_wielokata2 = kr.getWallNumber2();
             }
             if (x_dolnego == x_gornego) {
                pionowa = true;

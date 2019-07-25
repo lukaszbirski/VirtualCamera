@@ -1,36 +1,37 @@
 package Models;
 
-public class Edge2D {
-    private Point2D point1;
-    private Point2D point2;
+public class Edge3D {
+    private Point3D point1;
+    private Point3D point2;
     private int wallNumber1;
     private int wallNumber2;
 
-    public Edge2D(Point2D point1, Point2D point2) {
-        this.point1 = point1;
-        this.point2 = point2;
-    }
-
-    public Edge2D(Point2D point1, Point2D point2, int wallNumber1, int wallNumber2) {
+    public Edge3D(Point3D point1, Point3D point2, int wallNumber1, int wallNumber2) {
         this.point1 = point1;
         this.point2 = point2;
         this.wallNumber1 = wallNumber1;
         this.wallNumber2 = wallNumber2;
     }
 
-    public Point2D getPoint1() {
+    public Edge3D(Point3D point1, Point3D point2) {
+        this.point1 = point1;
+        this.point2 = point2;
+
+    }
+
+    public Point3D getPoint1() {
         return point1;
     }
 
-    public void setPoint1(Point2D point1) {
+    public void setPoint1(Point3D point1) {
         this.point1 = point1;
     }
 
-    public Point2D getPoint2() {
+    public Point3D getPoint2() {
         return point2;
     }
 
-    public void setPoint2(Point2D point2) {
+    public void setPoint2(Point3D point2) {
         this.point2 = point2;
     }
 
@@ -52,8 +53,12 @@ public class Edge2D {
 
     @Override
     public String toString() {
-        return "Krawędz2D{" + "punkt1=" + point1 + ", punkt2=" + point2 + '}' + "\n";
+        return "Edge3D{" + "punkt1=" + point1 + ", punkt2=" + point2 + ", nr_sciany1=" + wallNumber1 + ", nr_sciany2=" + wallNumber2 + '}' + "\n";
     }
+    
+
+
+    
     
     
 }

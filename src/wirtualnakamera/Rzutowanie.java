@@ -4,6 +4,7 @@
  */
 package wirtualnakamera;
 
+import Models.Edge3D;
 import Models.Point3D;
 
 import java.util.ArrayList;
@@ -39,14 +40,14 @@ public class Rzutowanie {
         return pkt;
     }
     
-    Krawedz3D rzutuj_krawedz(Krawedz3D kr) {
-        return new Krawedz3D(rzutuj_punkt(kr.punkt1), rzutuj_punkt(kr.punkt2), kr.nr_sciany1, kr.nr_sciany2);
+    Edge3D rzutuj_krawedz(Edge3D kr) {
+        return new Edge3D(rzutuj_punkt(kr.getPoint1()), rzutuj_punkt(kr.getPoint2()), kr.getWallNumber1(), kr.getWallNumber2());
         
     }
     
-    ArrayList<Krawedz3D> rzutujKrawedzie(ArrayList<Krawedz3D> krawedzie) {
-        ArrayList<Krawedz3D> zrzutowaneKrawedzie = new ArrayList<Krawedz3D>();
-        for (Krawedz3D kr : krawedzie) {
+    ArrayList<Edge3D> rzutujKrawedzie(ArrayList<Edge3D> krawedzie) {
+        ArrayList<Edge3D> zrzutowaneKrawedzie = new ArrayList<Edge3D>();
+        for (Edge3D kr : krawedzie) {
             zrzutowaneKrawedzie.add(rzutuj_krawedz(kr));
         }
         return zrzutowaneKrawedzie;

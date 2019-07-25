@@ -5,6 +5,7 @@
 package wirtualnakamera;
 
 import Models.Edge2D;
+import Models.Edge3D;
 
 /**
  *
@@ -42,7 +43,7 @@ public class Test {
         
         Kamera kam = new Kamera(rzut.rzutujKrawedzie(testowaScena.krawedzie));
         
-        for (Krawedz3D kr : kam.krawedzieNaKamerze) {
+        for (Edge3D kr : kam.krawedzieNaKamerze) {
             System.out.println(kr.toString());
         }
         

@@ -56,7 +56,7 @@ public class ImageModel extends JPanel {
 
     public void rysujKrawedzie(Graphics g) {
         for (Edge2D kr : krawedzieDoNarysowania) {
-            g.drawLine(kr.point1.x, kr.point1.y, kr.point2.x, kr.point2.y);
+            g.drawLine(kr.getPoint1().x, kr.getPoint1().y, kr.getPoint2().x, kr.getPoint2().y);
         }
     }
     

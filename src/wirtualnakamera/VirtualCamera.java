@@ -26,7 +26,7 @@ public class VirtualCamera {
     public Widok widok;
     int wysokosc;
     int szerokosc;
-    //   ArrayList<Krawedz3D> krawedzie;
+    //   ArrayList<Edge3D> krawedzie;
     static final double ZOOM_STEP = 0.01;
     static final double TRANSLATION_STEP = 0.5;
     static final double ROTATION_STEP = 0.01;
@@ -43,18 +43,18 @@ public class VirtualCamera {
 
     public void przetworzScene() {
         /*
-         * for (Krawedz3D kr : scena.krawedzie) {
+         * for (Edge3D kr : scena.krawedzie) {
          * kr.punkt1.przemnozPrzezMacierzINormalizuj(scena.macierz);
          * kr.punkt2.przemnozPrzezMacierzINormalizuj(scena.macierz); }
          */
-//        ArrayList<Krawedz3D> krawedzie = new ArrayList<Krawedz3D>();
-//        for (Krawedz3D kr : scena.krawedzie) {
+//        ArrayList<Edge3D> krawedzie = new ArrayList<Edge3D>();
+//        for (Edge3D kr : scena.krawedzie) {
 //
 //            Point3D pkt1 = new Point3D(Matrix.multiply(scena.macierz.macierz, kr.punkt1.wektorWsp()));
 //            Point3D pkt2 = new Point3D(Matrix.multiply(scena.macierz.macierz, kr.punkt2.wektorWsp()));
 //            pkt1.normalizuj();
 //            pkt2.normalizuj();
-//            Krawedz3D krw = new Krawedz3D(pkt1, pkt2, kr.nr_sciany1, kr.nr_sciany2);
+//            Edge3D krw = new Edge3D(pkt1, pkt2, kr.nr_sciany1, kr.nr_sciany2);
 //            krawedzie.add(krw);
 //
 //
@@ -77,7 +77,7 @@ public class VirtualCamera {
 
         sciany = Scena.backfaceCulling(sciany);
 //        System.out.println(sciany);
-//        ArrayList<Krawedz3D> krawedzie = new ArrayList<Krawedz3D>();
+//        ArrayList<Edge3D> krawedzie = new ArrayList<Edge3D>();
 
 
 //        rzut = new Rzutowanie(odl_rzutni);

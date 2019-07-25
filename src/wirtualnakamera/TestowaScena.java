@@ -4,6 +4,8 @@
  */
 package wirtualnakamera;
 
+import Models.Edge3D;
+
 import java.awt.Color;
 import java.util.ArrayList;
 
@@ -12,54 +14,54 @@ import java.util.ArrayList;
  * @author rafal
  */
 public class TestowaScena {
-    ArrayList<Krawedz3D> krawedzie;
+    ArrayList<Edge3D> krawedzie;
     
     /*
-    Krawedz3D OX = new Krawedz3D(new Point3D(-100, 0, 0), new Point3D(100, 0, 0));
-    Krawedz3D OY = new Krawedz3D(new Point3D(0, -100, 0), new Point3D(0, 100, 0));
-    Krawedz3D OZ = new Krawedz3D(new Point3D(0, 0, -100), new Point3D(0, 0, 100));
-    Krawedz3D a = new Krawedz3D(new Point3D(-10, -10, 10), new Point3D(10, -10, 10));
-    Krawedz3D b = new Krawedz3D(new Point3D(10, -10, 10), new Point3D(10, -10, 20));
-    Krawedz3D c = new Krawedz3D(new Point3D(-10, -10, 20), new Point3D(10, -10, 20));
-    Krawedz3D d = new Krawedz3D(new Point3D(-10, -10, 10), new Point3D(-10, -10, 20));
-    Krawedz3D e = new Krawedz3D(new Point3D(-10, 10, 10), new Point3D(10, 10, 10));
-    Krawedz3D f = new Krawedz3D(new Point3D(10, 10, 10), new Point3D(10, 10, 20));
-    Krawedz3D g = new Krawedz3D(new Point3D(-10, 10, 20), new Point3D(10, 10, 20));
-    Krawedz3D h = new Krawedz3D(new Point3D(-10, 10, 10), new Point3D(-10, 10, 20));
-    Krawedz3D i = new Krawedz3D(new Point3D(-10, -10, 10), new Point3D(-10, 10, 10));
-    Krawedz3D j = new Krawedz3D(new Point3D(10, -10, 10), new Point3D(10, 10, 10));
-    Krawedz3D k = new Krawedz3D(new Point3D(10, -10, 20), new Point3D(10, 10, 20));
-    Krawedz3D l = new Krawedz3D(new Point3D(-10, -10, 20), new Point3D(-10, 10, 20));
-    Krawedz3D a1 = new Krawedz3D(new Point3D(-40, -10, 15), new Point3D(-30, -10, 15));
-    Krawedz3D b1 = new Krawedz3D(new Point3D(-30, -10, 15), new Point3D(-30, -10, 20));
-    Krawedz3D c1 = new Krawedz3D(new Point3D(-40, -10, 20), new Point3D(-30, -10, 20));
-    Krawedz3D d1 = new Krawedz3D(new Point3D(-40, -10, 15), new Point3D(-40, -10, 20));
-    Krawedz3D e1 = new Krawedz3D(new Point3D(-40, 20, 15), new Point3D(-30, 20, 15));
-    Krawedz3D f1 = new Krawedz3D(new Point3D(-30, 20, 15), new Point3D(-30, 20, 20));
-    Krawedz3D g1 = new Krawedz3D(new Point3D(-40, 20, 20), new Point3D(-30, 20, 20));
-    Krawedz3D h1 = new Krawedz3D(new Point3D(-40, 20, 15), new Point3D(-40, 20, 20));
-    Krawedz3D i1 = new Krawedz3D(new Point3D(-40, -10, 15), new Point3D(-40, 20, 15));
-    Krawedz3D j1 = new Krawedz3D(new Point3D(-30, -10, 15), new Point3D(-30, 20, 15));
-    Krawedz3D k1 = new Krawedz3D(new Point3D(-30, -10, 20), new Point3D(-30, 20, 20));
-    Krawedz3D l1 = new Krawedz3D(new Point3D(-40, -10, 20), new Point3D(-40, 20, 20));
-    Krawedz3D a2 = new Krawedz3D(new Point3D(-40, -10, 25), new Point3D(-30, -10, 25));
-    Krawedz3D b2 = new Krawedz3D(new Point3D(-30, -10, 25), new Point3D(-30, -10, 35));
-    Krawedz3D c2 = new Krawedz3D(new Point3D(-40, -10, 35), new Point3D(-30, -10, 35));
-    Krawedz3D d2 = new Krawedz3D(new Point3D(-40, -10, 25), new Point3D(-40, -10, 35));
-    Krawedz3D e2 = new Krawedz3D(new Point3D(-40, 30, 25), new Point3D(-30, 30, 25));
-    Krawedz3D f2 = new Krawedz3D(new Point3D(-30, 30, 25), new Point3D(-30, 30, 35));
-    Krawedz3D g2 = new Krawedz3D(new Point3D(-40, 30, 35), new Point3D(-30, 30, 35));
-    Krawedz3D h2 = new Krawedz3D(new Point3D(-40, 30, 25), new Point3D(-40, 30, 35));
-    Krawedz3D i2 = new Krawedz3D(new Point3D(-40, -10, 25), new Point3D(-40, 30, 25));
-    Krawedz3D j2 = new Krawedz3D(new Point3D(-30, -10, 25), new Point3D(-30, 30, 25));
-    Krawedz3D k2 = new Krawedz3D(new Point3D(-30, -10, 35), new Point3D(-30, 30, 35));
-    Krawedz3D l2 = new Krawedz3D(new Point3D(-40, -10, 35), new Point3D(-40, 30, 35));
+    Edge3D OX = new Edge3D(new Point3D(-100, 0, 0), new Point3D(100, 0, 0));
+    Edge3D OY = new Edge3D(new Point3D(0, -100, 0), new Point3D(0, 100, 0));
+    Edge3D OZ = new Edge3D(new Point3D(0, 0, -100), new Point3D(0, 0, 100));
+    Edge3D a = new Edge3D(new Point3D(-10, -10, 10), new Point3D(10, -10, 10));
+    Edge3D b = new Edge3D(new Point3D(10, -10, 10), new Point3D(10, -10, 20));
+    Edge3D c = new Edge3D(new Point3D(-10, -10, 20), new Point3D(10, -10, 20));
+    Edge3D d = new Edge3D(new Point3D(-10, -10, 10), new Point3D(-10, -10, 20));
+    Edge3D e = new Edge3D(new Point3D(-10, 10, 10), new Point3D(10, 10, 10));
+    Edge3D f = new Edge3D(new Point3D(10, 10, 10), new Point3D(10, 10, 20));
+    Edge3D g = new Edge3D(new Point3D(-10, 10, 20), new Point3D(10, 10, 20));
+    Edge3D h = new Edge3D(new Point3D(-10, 10, 10), new Point3D(-10, 10, 20));
+    Edge3D i = new Edge3D(new Point3D(-10, -10, 10), new Point3D(-10, 10, 10));
+    Edge3D j = new Edge3D(new Point3D(10, -10, 10), new Point3D(10, 10, 10));
+    Edge3D k = new Edge3D(new Point3D(10, -10, 20), new Point3D(10, 10, 20));
+    Edge3D l = new Edge3D(new Point3D(-10, -10, 20), new Point3D(-10, 10, 20));
+    Edge3D a1 = new Edge3D(new Point3D(-40, -10, 15), new Point3D(-30, -10, 15));
+    Edge3D b1 = new Edge3D(new Point3D(-30, -10, 15), new Point3D(-30, -10, 20));
+    Edge3D c1 = new Edge3D(new Point3D(-40, -10, 20), new Point3D(-30, -10, 20));
+    Edge3D d1 = new Edge3D(new Point3D(-40, -10, 15), new Point3D(-40, -10, 20));
+    Edge3D e1 = new Edge3D(new Point3D(-40, 20, 15), new Point3D(-30, 20, 15));
+    Edge3D f1 = new Edge3D(new Point3D(-30, 20, 15), new Point3D(-30, 20, 20));
+    Edge3D g1 = new Edge3D(new Point3D(-40, 20, 20), new Point3D(-30, 20, 20));
+    Edge3D h1 = new Edge3D(new Point3D(-40, 20, 15), new Point3D(-40, 20, 20));
+    Edge3D i1 = new Edge3D(new Point3D(-40, -10, 15), new Point3D(-40, 20, 15));
+    Edge3D j1 = new Edge3D(new Point3D(-30, -10, 15), new Point3D(-30, 20, 15));
+    Edge3D k1 = new Edge3D(new Point3D(-30, -10, 20), new Point3D(-30, 20, 20));
+    Edge3D l1 = new Edge3D(new Point3D(-40, -10, 20), new Point3D(-40, 20, 20));
+    Edge3D a2 = new Edge3D(new Point3D(-40, -10, 25), new Point3D(-30, -10, 25));
+    Edge3D b2 = new Edge3D(new Point3D(-30, -10, 25), new Point3D(-30, -10, 35));
+    Edge3D c2 = new Edge3D(new Point3D(-40, -10, 35), new Point3D(-30, -10, 35));
+    Edge3D d2 = new Edge3D(new Point3D(-40, -10, 25), new Point3D(-40, -10, 35));
+    Edge3D e2 = new Edge3D(new Point3D(-40, 30, 25), new Point3D(-30, 30, 25));
+    Edge3D f2 = new Edge3D(new Point3D(-30, 30, 25), new Point3D(-30, 30, 35));
+    Edge3D g2 = new Edge3D(new Point3D(-40, 30, 35), new Point3D(-30, 30, 35));
+    Edge3D h2 = new Edge3D(new Point3D(-40, 30, 25), new Point3D(-40, 30, 35));
+    Edge3D i2 = new Edge3D(new Point3D(-40, -10, 25), new Point3D(-40, 30, 25));
+    Edge3D j2 = new Edge3D(new Point3D(-30, -10, 25), new Point3D(-30, 30, 25));
+    Edge3D k2 = new Edge3D(new Point3D(-30, -10, 35), new Point3D(-30, 30, 35));
+    Edge3D l2 = new Edge3D(new Point3D(-40, -10, 35), new Point3D(-40, 30, 35));
     
     */
     Matrix macierz;
 
     public TestowaScena() {
-        krawedzie = new ArrayList<Krawedz3D>();
+        krawedzie = new ArrayList<Edge3D>();
         
         //krawedzie.add(OX);
         //krawedzie.add(OY);
@@ -110,7 +112,7 @@ public class TestowaScena {
     }
 
     public static Scena stworzScene() {
-        ArrayList<Krawedz3D> krawedzie = new ArrayList<Krawedz3D>();
+        ArrayList<Edge3D> krawedzie = new ArrayList<Edge3D>();
         Matrix macierz = new Matrix(Matrix.identityMatrix());
         Scena scena = new Scena(krawedzie, macierz);
         scena.dodajNowyProstopadloscian(-40, -10, 145, -30, 20, 150, Color.BLUE);

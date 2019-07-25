@@ -4,6 +4,7 @@
  */
 package wirtualnakamera;
 
+import Models.Edge3D;
 import Models.Point3D;
 
 import java.awt.Color;
@@ -14,22 +15,22 @@ import java.util.ArrayList;
  * @author rafal
  */
 public class Scena {
-    ArrayList<Krawedz3D> krawedzie;
+    ArrayList<Edge3D> krawedzie;
     ArrayList<Sciana> sciany;
     Matrix matrix;
     VirtualCamera wk;
     int numerOstatniejSciany;
     
 
-    public Scena(ArrayList<Krawedz3D> krawedzie, Matrix matrix) {
+    public Scena(ArrayList<Edge3D> krawedzie, Matrix matrix) {
         this.krawedzie = krawedzie;
         this.matrix = matrix;
         numerOstatniejSciany = 0;
         sciany = new ArrayList<Sciana>();
     }
 
-    public ArrayList<Krawedz3D> nowyProstopadloscian(double minX, double minY, double minZ, double maxX, double maxY, double maxZ, Color kolor) {
-        ArrayList<Krawedz3D> krawedzie = new ArrayList<Krawedz3D>();
+    public ArrayList<Edge3D> nowyProstopadloscian(double minX, double minY, double minZ, double maxX, double maxY, double maxZ, Color kolor) {
+        ArrayList<Edge3D> krawedzie = new ArrayList<Edge3D>();
         Point3D pkt1 = new Point3D(minX, minY, minZ);
         Point3D pkt2 = new Point3D(maxX, minY, minZ);
         Point3D pkt3 = new Point3D(maxX, minY, maxZ);
@@ -57,20 +58,20 @@ public class Scena {
         sciany.add(scianaF);
 
 
-        Krawedz3D kra = new Krawedz3D(pkt1, pkt2, sciany.indexOf(scianaA), sciany.indexOf(scianaC));
-        Krawedz3D krb = new Krawedz3D(pkt2, pkt3, sciany.indexOf(scianaA), sciany.indexOf(scianaD));
-        Krawedz3D krc = new Krawedz3D(pkt3, pkt4, sciany.indexOf(scianaA), sciany.indexOf(scianaE));
-        Krawedz3D krd = new Krawedz3D(pkt4, pkt1, sciany.indexOf(scianaA), sciany.indexOf(scianaF));
+        Edge3D kra = new Edge3D(pkt1, pkt2, sciany.indexOf(scianaA), sciany.indexOf(scianaC));
+        Edge3D krb = new Edge3D(pkt2, pkt3, sciany.indexOf(scianaA), sciany.indexOf(scianaD));
+        Edge3D krc = new Edge3D(pkt3, pkt4, sciany.indexOf(scianaA), sciany.indexOf(scianaE));
+        Edge3D krd = new Edge3D(pkt4, pkt1, sciany.indexOf(scianaA), sciany.indexOf(scianaF));
         
-        Krawedz3D kre = new Krawedz3D(pkt5, pkt6, sciany.indexOf(scianaB), sciany.indexOf(scianaC));
-        Krawedz3D krf = new Krawedz3D(pkt6, pkt7, sciany.indexOf(scianaB), sciany.indexOf(scianaD));
-        Krawedz3D krg = new Krawedz3D(pkt7, pkt8, sciany.indexOf(scianaB), sciany.indexOf(scianaE));
-        Krawedz3D krh = new Krawedz3D(pkt8, pkt5, sciany.indexOf(scianaB), sciany.indexOf(scianaF));
+        Edge3D kre = new Edge3D(pkt5, pkt6, sciany.indexOf(scianaB), sciany.indexOf(scianaC));
+        Edge3D krf = new Edge3D(pkt6, pkt7, sciany.indexOf(scianaB), sciany.indexOf(scianaD));
+        Edge3D krg = new Edge3D(pkt7, pkt8, sciany.indexOf(scianaB), sciany.indexOf(scianaE));
+        Edge3D krh = new Edge3D(pkt8, pkt5, sciany.indexOf(scianaB), sciany.indexOf(scianaF));
         
-        Krawedz3D kri = new Krawedz3D(pkt1, pkt5, sciany.indexOf(scianaC), sciany.indexOf(scianaF));
-        Krawedz3D krj = new Krawedz3D(pkt2, pkt6, sciany.indexOf(scianaC), sciany.indexOf(scianaD));
-        Krawedz3D krk = new Krawedz3D(pkt3, pkt7, sciany.indexOf(scianaD), sciany.indexOf(scianaE));
-        Krawedz3D krl = new Krawedz3D(pkt4, pkt8, sciany.indexOf(scianaE), sciany.indexOf(scianaF));
+        Edge3D kri = new Edge3D(pkt1, pkt5, sciany.indexOf(scianaC), sciany.indexOf(scianaF));
+        Edge3D krj = new Edge3D(pkt2, pkt6, sciany.indexOf(scianaC), sciany.indexOf(scianaD));
+        Edge3D krk = new Edge3D(pkt3, pkt7, sciany.indexOf(scianaD), sciany.indexOf(scianaE));
+        Edge3D krl = new Edge3D(pkt4, pkt8, sciany.indexOf(scianaE), sciany.indexOf(scianaF));
         
 //        sciany.get(sciany.indexOf(scianaA)).krawedz1 = kra;
 //        sciany.get(sciany.indexOf(scianaA)).krawedz2 = krb;
@@ -109,21 +110,21 @@ public class Scena {
         
         
         /*
-        krawedzie.add(new Krawedz3D(new Point3D(minX, minY, minZ), new Point3D(maxX, minY, minZ) )); //a
-        krawedzie.add(new Krawedz3D(new Point3D(maxX, minY, minZ), new Point3D(maxX, minY, maxZ) )); //b
-        krawedzie.add(new Krawedz3D(new Point3D(minX, minY, maxZ), new Point3D(maxX, minY, maxZ))); //c
-        krawedzie.add(new Krawedz3D(new Point3D(minX, minY, minZ), new Point3D(minX, minY, maxZ))); //d
+        krawedzie.add(new Edge3D(new Point3D(minX, minY, minZ), new Point3D(maxX, minY, minZ) )); //a
+        krawedzie.add(new Edge3D(new Point3D(maxX, minY, minZ), new Point3D(maxX, minY, maxZ) )); //b
+        krawedzie.add(new Edge3D(new Point3D(minX, minY, maxZ), new Point3D(maxX, minY, maxZ))); //c
+        krawedzie.add(new Edge3D(new Point3D(minX, minY, minZ), new Point3D(minX, minY, maxZ))); //d
 
         
-        krawedzie.add(new Krawedz3D(new Point3D(minX, maxY, minZ), new Point3D(maxX, maxY, minZ))); //e
-        krawedzie.add(new Krawedz3D(new Point3D(maxX, maxY, minZ), new Point3D(maxX, maxY, maxZ))); //f
-        krawedzie.add(new Krawedz3D(new Point3D(minX, maxY, maxZ), new Point3D(maxX, maxY, maxZ))); //g
-        krawedzie.add(new Krawedz3D(new Point3D(minX, maxY, minZ), new Point3D(minX, maxY, maxZ))); //h
+        krawedzie.add(new Edge3D(new Point3D(minX, maxY, minZ), new Point3D(maxX, maxY, minZ))); //e
+        krawedzie.add(new Edge3D(new Point3D(maxX, maxY, minZ), new Point3D(maxX, maxY, maxZ))); //f
+        krawedzie.add(new Edge3D(new Point3D(minX, maxY, maxZ), new Point3D(maxX, maxY, maxZ))); //g
+        krawedzie.add(new Edge3D(new Point3D(minX, maxY, minZ), new Point3D(minX, maxY, maxZ))); //h
         
-        krawedzie.add(new Krawedz3D(new Point3D(minX, minY, minZ), new Point3D(minX, maxY, minZ))); //i
-        krawedzie.add(new Krawedz3D(new Point3D(maxX, minY, minZ), new Point3D(maxX, maxY, minZ))); //j
-        krawedzie.add(new Krawedz3D(new Point3D(maxX, minY, maxZ), new Point3D(maxX, maxY, maxZ))); //k
-        krawedzie.add(new Krawedz3D(new Point3D(minX, minY, maxZ), new Point3D(minX, maxY, maxZ))); //l
+        krawedzie.add(new Edge3D(new Point3D(minX, minY, minZ), new Point3D(minX, maxY, minZ))); //i
+        krawedzie.add(new Edge3D(new Point3D(maxX, minY, minZ), new Point3D(maxX, maxY, minZ))); //j
+        krawedzie.add(new Edge3D(new Point3D(maxX, minY, maxZ), new Point3D(maxX, maxY, maxZ))); //k
+        krawedzie.add(new Edge3D(new Point3D(minX, minY, maxZ), new Point3D(minX, maxY, maxZ))); //l
         */
         
         return krawedzie;
