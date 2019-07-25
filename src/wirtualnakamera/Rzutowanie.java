@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package wirtualnakamera;
 
 import Algorithms.Matrix;
@@ -10,10 +6,6 @@ import Models.Point3D;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author rafal
- */
 public class Rzutowanie {
     double d;
     Matrix macierz;

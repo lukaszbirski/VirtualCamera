@@ -1,5 +1,6 @@
 package Models;
 
+/**Klasa zawiera definiuję krawędzi w 2D*/
 public class Edge2D {
     private Point2D point1;
     private Point2D point2;

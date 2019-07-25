@@ -1,16 +1,16 @@
 package Controllers;
 
-import GUI.ImageModel;
+import Models.GUI.SceneModel;
 import wirtualnakamera.VirtualCamera;
 
 /**Klasa służy do połączenia obsługi klawiszy z przekształceniami (macierzami przekształceń)*/
 public class Controller {
 
-    ImageModel drawing;
+    SceneModel drawing;
     VirtualCamera virtualCamera;
     private boolean checkIfBoardersAreVisible = false;
 
-    public Controller(ImageModel drawing, VirtualCamera virtualCamera) {
+    public Controller(SceneModel drawing, VirtualCamera virtualCamera) {
         this.drawing = drawing;
         this.virtualCamera = virtualCamera;
     }
@@ -114,9 +114,9 @@ public class Controller {
     /**Metoda rysuje obiekt*/
     public void draw() {
 
-        this.drawing.NarysujBufferedImage(this.virtualCamera.getBuforEkranu().przeksztalcNaBufferedImage());
+        this.drawing.drawBufferedImage(this.virtualCamera.getBuforEkranu().przeksztalcNaBufferedImage());
         if (checkIfBoardersAreVisible) {
-            this.drawing.NarysujKrawedzieNaRysunku(virtualCamera.getKrawedzieDoNarysowania());
+            this.drawing.drawListOfEdges2D(virtualCamera.getKrawedzieDoNarysowania());
         }
 
     }
