@@ -5,8 +5,8 @@
 
 import Controllers.Controller;
 import Controllers.Key;
-import gui.ImageModel;
-import gui.Okno;
+import GUI.ImageModel;
+import GUI.Window;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -29,9 +29,9 @@ public class Main {
     static final double POCZATKOWA_ODLEGLOSC_RZUTOWANIA = 1;
 
     public static void main(String Args[]) {
-        gui.Okno okno = new Okno("Wirtualna kamera");
+        Window okno = new Window("Wirtualna kamera");
         Key key = new Key();
-        //gui.Klawisze2 klawisze = new gui.Klawisze2();
+        //GUI.Klawisze2 klawisze = new GUI.Klawisze2();
         
         KeyboardFocusManager.getCurrentKeyboardFocusManager().addKeyEventDispatcher(key);
         

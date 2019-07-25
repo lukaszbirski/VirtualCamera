@@ -1,6 +1,6 @@
 package Controllers;
 
-import gui.ImageModel;
+import GUI.ImageModel;
 import wirtualnakamera.VirtualCamera;
 
 /**Klasa służy do połączenia obsługi klawiszy z przekształceniami (macierzami przekształceń)*/
