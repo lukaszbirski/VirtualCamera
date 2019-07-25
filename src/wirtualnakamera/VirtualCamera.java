@@ -7,6 +7,7 @@ package wirtualnakamera;
 import java.awt.Color;
 import java.util.ArrayList;
 
+import Algorithms.Matrix;
 import Models.Edge2D;
 import Models.Point3D;
 import zaslanianie.Algorytm;
@@ -63,13 +64,13 @@ public class VirtualCamera {
         ArrayList<Sciana> sciany = new ArrayList<Sciana>();
         for (Sciana s : scena.sciany) {         //transformacje scian
 
-            Point3D npkt1 = new Point3D(Matrix.multiply(scena.matrix.matrix, s.pkt1.tmpVector()));
+            Point3D npkt1 = new Point3D(Matrix.multiply(scena.matrix.getMatrix(), s.pkt1.tmpVector()));
             npkt1.normalization();
-            Point3D npkt2 = new Point3D(Matrix.multiply(scena.matrix.matrix, s.pkt2.tmpVector()));
+            Point3D npkt2 = new Point3D(Matrix.multiply(scena.matrix.getMatrix(), s.pkt2.tmpVector()));
             npkt2.normalization();
-            Point3D npkt3 = new Point3D(Matrix.multiply(scena.matrix.matrix, s.pkt3.tmpVector()));
+            Point3D npkt3 = new Point3D(Matrix.multiply(scena.matrix.getMatrix(), s.pkt3.tmpVector()));
             npkt3.normalization();
-            Point3D npkt4 = new Point3D(Matrix.multiply(scena.matrix.matrix, s.pkt4.tmpVector()));
+            Point3D npkt4 = new Point3D(Matrix.multiply(scena.matrix.getMatrix(), s.pkt4.tmpVector()));
             npkt4.normalization();
             Sciana ns = new Sciana(npkt1, npkt2, npkt3, npkt4, s.kolor);
             sciany.add(ns);
@@ -126,84 +127,84 @@ public class VirtualCamera {
 
     /**Metoda przesuwa widok kamery w prawo wg. OX*/
     public void translationInRightOX() {
-        scena.matrix.matrix = Matrix.multiply(Matrix.translationMatrix(-1 * TRANSLATION_STEP, 0, 0), scena.matrix.matrix);
+        scena.matrix.setMatrix(Matrix.multiply(Matrix.translationMatrix(-1 * TRANSLATION_STEP, 0, 0), scena.matrix.getMatrix()));
         przetworzScene();
 
     }
 
     /**Metoda przesuwa widok kamery w lewo wg. OX*/
     public void translationInLeftOX() {
-        scena.matrix.matrix = Matrix.multiply(Matrix.translationMatrix(1 * TRANSLATION_STEP, 0, 0), scena.matrix.matrix);
+        scena.matrix.setMatrix(Matrix.multiply(Matrix.translationMatrix(1 * TRANSLATION_STEP, 0, 0), scena.matrix.getMatrix()));
         przetworzScene();
 
     }
 
     /**Metoda przesuwa widok kamery w dół wg. OY*/
     public void translationDownOY() {
-        scena.matrix.matrix = Matrix.multiply(Matrix.translationMatrix(0, -1 * TRANSLATION_STEP, 0), scena.matrix.matrix);
+        scena.matrix.setMatrix(Matrix.multiply(Matrix.translationMatrix(0, -1 * TRANSLATION_STEP, 0), scena.matrix.getMatrix()));
         przetworzScene();
 
     }
 
     /**Metoda przesuwa widok kamery w górę wg. OY*/
     public void translationUpOY() {
-        scena.matrix.matrix = Matrix.multiply(Matrix.translationMatrix(0, 1 * TRANSLATION_STEP, 0), scena.matrix.matrix);
+        scena.matrix.setMatrix(Matrix.multiply(Matrix.translationMatrix(0, 1 * TRANSLATION_STEP, 0), scena.matrix.getMatrix()));
         przetworzScene();
 
     }
 
     /**Metoda przesuwa widok kamery do przodu wg. OZ*/
     public void translationForwardOZ() {
-        scena.matrix.matrix = Matrix.multiply(Matrix.translationMatrix(0, 0, -1 * TRANSLATION_STEP), scena.matrix.matrix);
+        scena.matrix.setMatrix(Matrix.multiply(Matrix.translationMatrix(0, 0, -1 * TRANSLATION_STEP), scena.matrix.getMatrix()));
         przetworzScene();
 
     }
 
     /**Metoda przesuwa widok kamery do tyłu wg. OZ*/
     public void translationBackwardOZ() {
-        scena.matrix.matrix = Matrix.multiply(Matrix.translationMatrix(0, 0, 1 * TRANSLATION_STEP), scena.matrix.matrix);
+        scena.matrix.setMatrix(Matrix.multiply(Matrix.translationMatrix(0, 0, 1 * TRANSLATION_STEP), scena.matrix.getMatrix()));
         przetworzScene();
 
     }
 
     /**Metoda ma za zadanie obracać obiekt wg. OX przeciwnie do ruchu wskazówek zegara*/
     public void counterClockwiseRotatioOX() {
-        scena.matrix.matrix = Matrix.multiply(Matrix.rotationMatrixOX(ROTATION_STEP), scena.matrix.matrix);
+        scena.matrix.setMatrix(Matrix.multiply(Matrix.rotationMatrixOX(ROTATION_STEP), scena.matrix.getMatrix()));
         przetworzScene();
     }
 
     /**Metoda ma za zadanie obracać obiekt wg. OY zgodnie z ruchem wskazówek zegara*/
     public void clockwiseRotatioOX() {
-        scena.matrix.matrix = Matrix.multiply(Matrix.rotationMatrixOX(-1 * ROTATION_STEP), scena.matrix.matrix);
+        scena.matrix.setMatrix(Matrix.multiply(Matrix.rotationMatrixOX(-1 * ROTATION_STEP), scena.matrix.getMatrix()));
         przetworzScene();
     }
 
     /**Metoda ma za zadanie obracać obiekt wg. OY przeciwnie do ruchu wskazówek zegara*/
     public void counterClockwiseRotatioOY() {
-        scena.matrix.matrix = Matrix.multiply(Matrix.rotationMatrixOY(ROTATION_STEP), scena.matrix.matrix);
+        scena.matrix.setMatrix(Matrix.multiply(Matrix.rotationMatrixOY(ROTATION_STEP), scena.matrix.getMatrix()));
         przetworzScene();
     }
 
     /**Metoda ma za zadanie obracać obiekt wg. OY zgodnie z ruchem wskazówek zegara*/
     public void clockwiseRotatioOY() {
-        scena.matrix.matrix = Matrix.multiply(Matrix.rotationMatrixOY(-1 * ROTATION_STEP), scena.matrix.matrix);
+        scena.matrix.setMatrix(Matrix.multiply(Matrix.rotationMatrixOY(-1 * ROTATION_STEP), scena.matrix.getMatrix()));
         przetworzScene();
     }
 
     /**Metoda ma za zadanie obracać obiekt wg. OZ przeciwnie do ruchu wskazówek zegara*/
     public void counterClockwiseRotatioOZ() {
-        scena.matrix.matrix = Matrix.multiply(Matrix.rotationMatrixOZ(ROTATION_STEP), scena.matrix.matrix);
+        scena.matrix.setMatrix(Matrix.multiply(Matrix.rotationMatrixOZ(ROTATION_STEP), scena.matrix.getMatrix()));
         przetworzScene();
     }
 
     /**Metoda ma za zadanie obracać obiekt wg. OZ zgodnie z ruchem wskazówek zegara*/
     public void clockwiseRotatioOZ() {
-        scena.matrix.matrix = Matrix.multiply(Matrix.rotationMatrixOZ(-1 * ROTATION_STEP), scena.matrix.matrix);
+        scena.matrix.setMatrix(Matrix.multiply(Matrix.rotationMatrixOZ(-1 * ROTATION_STEP), scena.matrix.getMatrix()));
         przetworzScene();
     }
     /**Metoda resetuje wszystkie przekształcenia*/
     public void resetTranslation() {
-        scena.matrix.matrix = Matrix.identityMatrix();
+        scena.matrix.setMatrix(Matrix.identityMatrix());
         this.odl_rzutni = this.poczatkowa_odl_rzutni;
         przetworzScene();
     }

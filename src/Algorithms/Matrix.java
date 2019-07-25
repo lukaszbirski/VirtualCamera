@@ -1,8 +1,16 @@
-package wirtualnakamera;
+package Algorithms;
 
 public class Matrix {
 
-    double matrix[][];
+    private double matrix[][];
+
+    public double[][] getMatrix() {
+        return matrix;
+    }
+
+    public void setMatrix(double[][] matrix) {
+        this.matrix = matrix;
+    }
 
     public Matrix(double[][] matrix) {
         this.matrix = matrix;

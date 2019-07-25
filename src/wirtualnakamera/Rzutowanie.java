@@ -4,6 +4,7 @@
  */
 package wirtualnakamera;
 
+import Algorithms.Matrix;
 import Models.Edge3D;
 import Models.Point3D;
 

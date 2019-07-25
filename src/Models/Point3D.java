@@ -1,8 +1,5 @@
 package Models;
 
-import Models.Point2D;
-import wirtualnakamera.Matrix;
-
 /**Klasa zawiera definicje punktu w przestrzeni 3D*/
 public class Point3D extends Point2D {
 
