@@ -4,6 +4,7 @@
  */
 package wirtualnakamera;
 
+import Algorithms.Rzutowanie;
 import Models.Edge2D;
 import Models.Edge3D;
 
@@ -20,27 +21,7 @@ public class Test {
         int wysokosc = 600;
         int szerokosc = 600;
         
-//        ArrayList<Punkt> zrzutowane_punkty = new ArrayList<Punkt>();
-//        
-//        
-//        for (Krawedz kr : testowaScena.krawedzie) {
-//            Punkt pkt;
-//            pkt = rzut.rzutuj_punkt(kr.punkt1);
-//            zrzutowane_punkty.add(pkt);
-//            pkt = rzut.rzutuj_punkt(kr.punkt2);
-//            zrzutowane_punkty.add(pkt);            
-//        }
-//        
-//        for (Punkt p : zrzutowane_punkty) {
-//            System.out.println(p.toString());
-//        }
-        
-//        ArrayList<Krawedz> zrzutowaneKrawedzie = rzut.rzutujKrawedzie(testowaScena.krawedzie);
-//        
-//        for (Krawedz kr : zrzutowaneKrawedzie) {
-//            System.out.println(kr.toString());
-//        }
-        
+
         Kamera kam = new Kamera(rzut.rzutujKrawedzie(testowaScena.krawedzie));
         
         for (Edge3D kr : kam.krawedzieNaKamerze) {

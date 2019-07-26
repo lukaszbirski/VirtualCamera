@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import Models.Edge2D;
-import wirtualnakamera.Sciana;
+import Models.Wall;
 import wirtualnakamera.Widok;
 import zaslanianie.ListaWielokatow.Wielokat;
 import zaslanianie.TablicaKrawedziAktywnych.AktywnaKrawedz;
@@ -21,7 +21,7 @@ import zaslanianie.TablicaKrawedziAktywnych.AktywnaKrawedz;
 public class Algorytm {
 
     ArrayList<Edge2D> krawedzie;
-    ArrayList<Sciana> sciany;
+    ArrayList<Wall> sciany;
     int wysokosc, szerokosc;
     Color kolorTla;
     public TablicaKrawedzi tablicaKrawedzi;
@@ -30,7 +30,7 @@ public class Algorytm {
     public double d;
     Widok widok;
 
-    public Algorytm(ArrayList<Edge2D> krawedzie, ArrayList<Sciana> sciany, int wysokosc, int szerokosc, Color kolorTla, double d, Widok widok) {
+    public Algorytm(ArrayList<Edge2D> krawedzie, ArrayList<Wall> sciany, int wysokosc, int szerokosc, Color kolorTla, double d, Widok widok) {
         this.krawedzie = krawedzie;
         this.sciany = sciany;
         this.wysokosc = wysokosc;

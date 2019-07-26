@@ -6,6 +6,7 @@ package wirtualnakamera;
 
 import Models.Edge3D;
 import Models.Point3D;
+import Models.Wall;
 
 import java.util.ArrayList;
 
@@ -35,25 +36,25 @@ public class Kamera {
     public Kamera() {
     }
     
-    public ArrayList<Sciana> przytnijScianyDoKamery(ArrayList<Sciana> sciany) {
+    public ArrayList<Wall> przytnijScianyDoKamery(ArrayList<Wall> sciany) {
         this.krawedzieNaKamerze = new ArrayList<Edge3D>();
-        ArrayList<Sciana> noweSciany = new ArrayList<Sciana>();
-        for (Sciana sc : sciany) {
-            if (czyKrawedzJestNaKamerze(sc.krawedz1) && czyKrawedzJestNaKamerze(sc.krawedz2)
-                    && czyKrawedzJestNaKamerze(sc.krawedz3) && czyKrawedzJestNaKamerze(sc.krawedz4)) {
-                krawedzieNaKamerze.add(sc.krawedz1);
-                krawedzieNaKamerze.add(sc.krawedz2);
-                krawedzieNaKamerze.add(sc.krawedz3);
-                krawedzieNaKamerze.add(sc.krawedz4);
+        ArrayList<Wall> noweSciany = new ArrayList<Wall>();
+        for (Wall sc : sciany) {
+            if (czyKrawedzJestNaKamerze(sc.getEdge1()) && czyKrawedzJestNaKamerze(sc.getEdge2())
+                    && czyKrawedzJestNaKamerze(sc.getEdge3()) && czyKrawedzJestNaKamerze(sc.getEdge4())) {
+                krawedzieNaKamerze.add(sc.getEdge1());
+                krawedzieNaKamerze.add(sc.getEdge2());
+                krawedzieNaKamerze.add(sc.getEdge3());
+                krawedzieNaKamerze.add(sc.getEdge4());
                 noweSciany.add(sc);
             }
         }
         for (int i = 0; i < noweSciany.size() ; i++) {
-            Sciana sc = noweSciany.get(i);
-            sc.krawedz1.setWallNumber1(i);
-            sc.krawedz2.setWallNumber1(i);
-            sc.krawedz3.setWallNumber1(i);
-            sc.krawedz4.setWallNumber1(i);
+            Wall sc = noweSciany.get(i);
+            sc.getEdge1().setWallNumber1(i);
+            sc.getEdge2().setWallNumber1(i);
+            sc.getEdge3().setWallNumber1(i);
+            sc.getEdge4().setWallNumber1(i);
             
             
         }

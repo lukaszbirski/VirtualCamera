@@ -8,8 +8,10 @@ import java.awt.Color;
 import java.util.ArrayList;
 
 import Algorithms.Matrix;
+import Algorithms.Rzutowanie;
 import Models.Edge2D;
 import Models.Point3D;
+import Models.Wall;
 import zaslanianie.Algorytm;
 import zaslanianie.BuforEkranu;
 
@@ -61,18 +63,18 @@ public class VirtualCamera {
 //
 //        }
 //        
-        ArrayList<Sciana> sciany = new ArrayList<Sciana>();
-        for (Sciana s : scena.sciany) {         //transformacje scian
+        ArrayList<Wall> sciany = new ArrayList<Wall>();
+        for (Wall s : scena.sciany) {         //transformacje scian
 
-            Point3D npkt1 = new Point3D(Matrix.multiply(scena.matrix.getMatrix(), s.pkt1.tmpVector()));
+            Point3D npkt1 = new Point3D(Matrix.multiply(scena.matrix.getMatrix(), s.getPoint1().tmpVector()));
             npkt1.normalization();
-            Point3D npkt2 = new Point3D(Matrix.multiply(scena.matrix.getMatrix(), s.pkt2.tmpVector()));
+            Point3D npkt2 = new Point3D(Matrix.multiply(scena.matrix.getMatrix(), s.getPoint2().tmpVector()));
             npkt2.normalization();
-            Point3D npkt3 = new Point3D(Matrix.multiply(scena.matrix.getMatrix(), s.pkt3.tmpVector()));
+            Point3D npkt3 = new Point3D(Matrix.multiply(scena.matrix.getMatrix(), s.getPoint3().tmpVector()));
             npkt3.normalization();
-            Point3D npkt4 = new Point3D(Matrix.multiply(scena.matrix.getMatrix(), s.pkt4.tmpVector()));
+            Point3D npkt4 = new Point3D(Matrix.multiply(scena.matrix.getMatrix(), s.getPoint4().tmpVector()));
             npkt4.normalization();
-            Sciana ns = new Sciana(npkt1, npkt2, npkt3, npkt4, s.kolor);
+            Wall ns = new Wall(npkt1, npkt2, npkt3, npkt4, s.getColor());
             sciany.add(ns);
         }
 

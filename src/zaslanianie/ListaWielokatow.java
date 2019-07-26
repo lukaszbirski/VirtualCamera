@@ -6,7 +6,7 @@ package zaslanianie;
 
 import java.awt.Color;
 import java.util.ArrayList;
-import wirtualnakamera.Sciana;
+import Models.Wall;
 
 /**
  *
@@ -17,9 +17,9 @@ public class ListaWielokatow {
 
     ArrayList<Wielokat> lista;
 
-    public ListaWielokatow(ArrayList<Sciana> sc) {
+    public ListaWielokatow(ArrayList<Wall> sc) {
         lista = new ArrayList<Wielokat>();
-        for (Sciana s : sc) {
+        for (Wall s : sc) {
             Wielokat t = new Wielokat(s);
             lista.add(t);
 //            System.out.println("Wielokat " + sc.indexOf(s) + ";" + s.pkt1.x + ";" + s.pkt1.y + ";" + s.pkt1.z + ";" + s.pkt2.x + ";" + s.pkt2.y + ";" + s.pkt2.z + ";" + s.pkt3.x + ";" + s.pkt3.y + ";" + s.pkt3.z + ";" + t.wspSciany());
@@ -60,14 +60,14 @@ public class ListaWielokatow {
         boolean we_wy;
 
 
-        public Wielokat(Sciana s) {
+        public Wielokat(Wall s) {
             this.we_wy = false;
 
-            this.kolor = s.kolor;
-            this.A = s.A;
-            this.B = s.B;
-            this.C = s.C;
-            this.D = s.D;
+            this.kolor = s.getColor();
+            this.A = s.getA();
+            this.B = s.getB();
+            this.C = s.getC();
+            this.D = s.getD();
             
 //            double u1,u2,u3,v1,v2,v3;
 //            u1 = s.pkt1.x - s.pkt2.x;

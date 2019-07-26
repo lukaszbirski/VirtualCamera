@@ -7,6 +7,7 @@ package wirtualnakamera;
 import Algorithms.Matrix;
 import Models.Edge3D;
 import Models.Point3D;
+import Models.Wall;
 
 import java.awt.Color;
 import java.util.ArrayList;
@@ -17,7 +18,7 @@ import java.util.ArrayList;
  */
 public class Scena {
     ArrayList<Edge3D> krawedzie;
-    ArrayList<Sciana> sciany;
+    ArrayList<Wall> sciany;
     Matrix matrix;
     VirtualCamera wk;
     int numerOstatniejSciany;
@@ -27,7 +28,7 @@ public class Scena {
         this.krawedzie = krawedzie;
         this.matrix = matrix;
         numerOstatniejSciany = 0;
-        sciany = new ArrayList<Sciana>();
+        sciany = new ArrayList<Wall>();
     }
 
     public ArrayList<Edge3D> nowyProstopadloscian(double minX, double minY, double minZ, double maxX, double maxY, double maxZ, Color kolor) {
@@ -44,12 +45,12 @@ public class Scena {
         //sciany maja punkty zorientowane zgodnie z ruchem wskazowek zegara
         //normalne scian sa skierowane na zewnatrz bryly
         
-        Sciana scianaA = new Sciana(pkt1, pkt2, pkt3, pkt4, kolor);     //dolna podstawa
-        Sciana scianaB = new Sciana(pkt8, pkt7, pkt6, pkt5, kolor);     //gorna podstawa
-        Sciana scianaC = new Sciana(pkt5, pkt6, pkt2, pkt1, kolor);     //przednia sciana
-        Sciana scianaD = new Sciana(pkt6, pkt7, pkt3, pkt2, kolor);     //prawa sciana
-        Sciana scianaE = new Sciana(pkt7, pkt8, pkt4, pkt3, kolor);     //tylna sciana
-        Sciana scianaF = new Sciana(pkt8, pkt5, pkt1, pkt4, kolor);     //lewa sciana
+        Wall scianaA = new Wall(pkt1, pkt2, pkt3, pkt4, kolor);     //dolna podstawa
+        Wall scianaB = new Wall(pkt8, pkt7, pkt6, pkt5, kolor);     //gorna podstawa
+        Wall scianaC = new Wall(pkt5, pkt6, pkt2, pkt1, kolor);     //przednia sciana
+        Wall scianaD = new Wall(pkt6, pkt7, pkt3, pkt2, kolor);     //prawa sciana
+        Wall scianaE = new Wall(pkt7, pkt8, pkt4, pkt3, kolor);     //tylna sciana
+        Wall scianaF = new Wall(pkt8, pkt5, pkt1, pkt4, kolor);     //lewa sciana
         
         sciany.add(scianaA);
         sciany.add(scianaB);
@@ -142,10 +143,10 @@ public class Scena {
         return "Scena{" + "krawedzie=" + krawedzie + ", sciany=" + sciany + '}';
     }
     
-    public static ArrayList<Sciana> backfaceCulling(ArrayList<Sciana> sciany) {
-        ArrayList<Sciana> noweSciany = new ArrayList<Sciana>();
-        for (Sciana s : sciany) {
-            double wsp = s.A * s.pkt1.x + s.B * s.pkt1.y + s.C * s.pkt1.z;
+    public static ArrayList<Wall> backfaceCulling(ArrayList<Wall> sciany) {
+        ArrayList<Wall> noweSciany = new ArrayList<Wall>();
+        for (Wall s : sciany) {
+            double wsp = s.getA() * s.getPoint1().x + s.getB() * s.getPoint1().y + s.getC() * s.getPoint1().z;
             if (wsp < 0) {
                 noweSciany.add(s);
             }
