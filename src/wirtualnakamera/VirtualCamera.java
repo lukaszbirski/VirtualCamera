@@ -8,7 +8,7 @@ import java.awt.Color;
 import java.util.ArrayList;
 
 import Algorithms.Matrix;
-import Algorithms.Rzutowanie;
+import Algorithms.ProjectionAlgorithms;
 import Models.Edge2D;
 import Models.Point3D;
 import Models.Wall;
@@ -24,7 +24,7 @@ public class VirtualCamera {
     Scena scena;
     public double odl_rzutni;
     double poczatkowa_odl_rzutni;
-    Rzutowanie rzut;
+    ProjectionAlgorithms rzut;
     public Kamera kamera;
     public Widok widok;
     int wysokosc;
@@ -87,8 +87,8 @@ public class VirtualCamera {
 //        kamera = new Kamera(rzut.rzutujKrawedzie(krawedzie));
 //        widok = new Widok(wysokosc, szerokosc, kamera);
 
-        rzut = new Rzutowanie(odl_rzutni);
-        sciany = rzut.rzutujSciany(sciany);
+        rzut = new ProjectionAlgorithms(odl_rzutni);
+        sciany = rzut.projectWallList(sciany);
         kamera = new Kamera();
         sciany = kamera.przytnijScianyDoKamery(sciany);
         widok = new Widok(wysokosc, szerokosc, kamera);

@@ -2,7 +2,9 @@ package Models;
 
 import java.awt.Color;
 
-/**Klasa zawiera definicję parametrów ściany; punkty narożników, krawędzie, kolor ściany i współczynniki równania płaszczyzny*/
+/**Klasa zawiera definicję parametrów ściany w przestrzeni 3D;
+ * punkty narożników, krawędzie, kolor ściany i współczynniki
+ * równania płaszczyzn. Potrzebne do rzutowań z 3D na 2D*/
 public class Wall {
 
     private Point3D point1;

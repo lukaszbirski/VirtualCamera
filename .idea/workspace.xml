@@ -3,25 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="d78a5b79-bab2-4f68-97bf-007366d13633" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/META-INF/Virtual Camera - Lukasz Birski.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/META-INF/Virtual Camera - Lukasz Birski.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/Algorithms/Rzutowanie.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/wirtualnakamera/Kamera.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/wirtualnakamera/Kamera.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/wirtualnakamera/Rzutowanie.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/wirtualnakamera/Scena.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/wirtualnakamera/Scena.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/wirtualnakamera/Sciana.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/wirtualnakamera/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/wirtualnakamera/Test.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/wirtualnakamera/VirtualCamera.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/wirtualnakamera/VirtualCamera.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/wirtualnakamera/Wall.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/zaslanianie/Algorytm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/zaslanianie/Algorytm.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/zaslanianie/ListaWielokatow$Wielokat.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/zaslanianie/ListaWielokatow$Wielokat.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/zaslanianie/ListaWielokatow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Virtual Camera - Lukasz Birski/zaslanianie/ListaWielokatow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/wirtualnakamera/Kamera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/wirtualnakamera/Kamera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/wirtualnakamera/Rzutowanie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Algorithms/Rzutowanie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/wirtualnakamera/Scena.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/wirtualnakamera/Scena.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/wirtualnakamera/Sciana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/wirtualnakamera/Wall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Algorithms/Rzutowanie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Algorithms/ProjectionAlgorithms.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Wall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Wall.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/wirtualnakamera/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/wirtualnakamera/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/wirtualnakamera/VirtualCamera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/wirtualnakamera/VirtualCamera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/zaslanianie/Algorytm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/zaslanianie/Algorytm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/zaslanianie/ListaWielokatow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/zaslanianie/ListaWielokatow.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

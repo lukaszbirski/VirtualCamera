@@ -4,7 +4,7 @@
  */
 package wirtualnakamera;
 
-import Algorithms.Rzutowanie;
+import Algorithms.ProjectionAlgorithms;
 import Models.Edge2D;
 import Models.Edge3D;
 
@@ -17,12 +17,12 @@ public class Test {
     public static void wykonaj_test() {
         TestowaScena testowaScena = new TestowaScena();
         double odl_rzutni = 0.6;
-        Rzutowanie rzut = new Rzutowanie(odl_rzutni);
+        ProjectionAlgorithms rzut = new ProjectionAlgorithms(odl_rzutni);
         int wysokosc = 600;
         int szerokosc = 600;
         
 
-        Kamera kam = new Kamera(rzut.rzutujKrawedzie(testowaScena.krawedzie));
+        Kamera kam = new Kamera(rzut.projectEdgesList(testowaScena.krawedzie));
         
         for (Edge3D kr : kam.krawedzieNaKamerze) {
             System.out.println(kr.toString());
