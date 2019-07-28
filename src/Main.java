@@ -7,8 +7,8 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.KeyboardFocusManager;
 import javax.swing.JTextArea;
-import wirtualnakamera.Scena;
-import wirtualnakamera.TestowaScena;
+import wirtualnakamera.Scene;
+import Utils.Test;
 import wirtualnakamera.VirtualCamera;
 
 public class Main {
@@ -27,7 +27,7 @@ public class Main {
 
         String instrukcja = "Sterowanie: Translacje: oś OX - a d , oś OY - w s , oś OZ - q e ; Obroty: oś OX - l j , oś OY - i k, oś OZ - o u ; Przyblizanie: = -";
 
-        Scena scena = TestowaScena.stworzScene();
+        Scene scena = Test.createScene();
 
         VirtualCamera wk = new VirtualCamera(scena, POCZATKOWA_ODLEGLOSC_RZUTOWANIA, WYSOKOSC_OBRAZU, SZEROKOSC_OBRAZU);
         wk.przetworzScene();

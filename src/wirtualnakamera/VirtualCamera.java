@@ -21,7 +21,7 @@ import zaslanianie.BuforEkranu;
  */
 public class VirtualCamera {
 
-    Scena scena;
+    Scene scena;
     public double odl_rzutni;
     double poczatkowa_odl_rzutni;
     ProjectionAlgorithms rzut;
@@ -34,9 +34,9 @@ public class VirtualCamera {
     static final double TRANSLATION_STEP = 0.5;
     static final double ROTATION_STEP = 0.01;
     public BuforEkranu ekran;
-    Color kolorTla = Color.YELLOW;
+    Color kolorTla = Color.GRAY;
 
-    public VirtualCamera(Scena scena, double odl_rzutni, int wysokosc, int szerokosc) {
+    public VirtualCamera(Scene scena, double odl_rzutni, int wysokosc, int szerokosc) {
         this.poczatkowa_odl_rzutni = odl_rzutni;
         this.scena = scena;
         this.odl_rzutni = odl_rzutni;
@@ -45,24 +45,7 @@ public class VirtualCamera {
     }
 
     public void przetworzScene() {
-        /*
-         * for (Edge3D kr : scena.krawedzie) {
-         * kr.punkt1.przemnozPrzezMacierzINormalizuj(scena.macierz);
-         * kr.punkt2.przemnozPrzezMacierzINormalizuj(scena.macierz); }
-         */
-//        ArrayList<Edge3D> krawedzie = new ArrayList<Edge3D>();
-//        for (Edge3D kr : scena.krawedzie) {
-//
-//            Point3D pkt1 = new Point3D(Matrix.multiply(scena.macierz.macierz, kr.punkt1.wektorWsp()));
-//            Point3D pkt2 = new Point3D(Matrix.multiply(scena.macierz.macierz, kr.punkt2.wektorWsp()));
-//            pkt1.normalizuj();
-//            pkt2.normalizuj();
-//            Edge3D krw = new Edge3D(pkt1, pkt2, kr.nr_sciany1, kr.nr_sciany2);
-//            krawedzie.add(krw);
-//
-//
-//        }
-//        
+
         ArrayList<Wall> sciany = new ArrayList<Wall>();
         for (Wall s : scena.sciany) {         //transformacje scian
 
@@ -78,14 +61,7 @@ public class VirtualCamera {
             sciany.add(ns);
         }
 
-        sciany = Scena.backfaceCulling(sciany);
-//        System.out.println(sciany);
-//        ArrayList<Edge3D> krawedzie = new ArrayList<Edge3D>();
-
-
-//        rzut = new Rzutowanie(odl_rzutni);
-//        kamera = new Kamera(rzut.rzutujKrawedzie(krawedzie));
-//        widok = new Widok(wysokosc, szerokosc, kamera);
+        sciany = Scene.backfaceCulling(sciany);
 
         rzut = new ProjectionAlgorithms(odl_rzutni);
         sciany = rzut.projectWallList(sciany);
@@ -93,15 +69,8 @@ public class VirtualCamera {
         sciany = kamera.przytnijScianyDoKamery(sciany);
         widok = new Widok(wysokosc, szerokosc, kamera);
 
-
         Algorytm algorytm = new Algorytm(widok.krawedzieNaWidoku, sciany, wysokosc, szerokosc, kolorTla, odl_rzutni, widok);
         ekran = algorytm.eliminuj();
-        //System.out.println(getKrawedzieDoNarysowania());
-        //  System.out.println(algorytm.tablicaKrawedzi.lista);
-        //        for (int i = 0 ; i < algorytm.tablicaKrawedzi.lista.size(); i++) {
-        //            System.out.println(Integer.toString(i) + ": " + algorytm.tablicaKrawedzi.lista.get(i).toString() + "\n");
-        //        }
-
     }
 
     public ArrayList<Edge2D> getKrawedzieDoNarysowania() {
@@ -116,7 +85,6 @@ public class VirtualCamera {
     public void zoomIn() {
         this.odl_rzutni += ZOOM_STEP;
         przetworzScene();
-
     }
 
     /**Metoda oddala widok kamery od obiektu*/
