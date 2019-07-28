@@ -3,7 +3,6 @@ package Algorithms;
 import Models.Edge3D;
 import Models.Point3D;
 import Models.Wall;
-
 import java.util.ArrayList;
 
 /**Klasa odpowiada za przepisywanie realnych obiektów w 3D na
@@ -38,15 +37,6 @@ public class ProjectionAlgorithms {
         return projectedEdges;
     }
 
-    /**Metoda tworzy listę obiektów klasy Wall; tworzy listę ścian.*/
-    public ArrayList<Wall> projectWallList(ArrayList<Wall> walls) {
-        ArrayList<Wall> projectedWalls = new ArrayList<Wall>();
-        for (Wall wall : walls) {
-            projectedWalls.add(projectWall(wall));
-        }
-        return projectedWalls;
-    }
-
     /**Metoda służy do rzutowania zadanej ściany. Zwraca obiekt klasy Wall po przekształceniu.*/
     public Wall projectWall(Wall wall) {
         wall.setEdge1(projectEdge3D(wall.getEdge1()));
@@ -54,5 +44,14 @@ public class ProjectionAlgorithms {
         wall.setEdge3(projectEdge3D(wall.getEdge3()));
         wall.setEdge4(projectEdge3D(wall.getEdge4()));
         return wall;
+    }
+
+    /**Metoda tworzy listę obiektów klasy Wall; tworzy listę ścian.*/
+    public ArrayList<Wall> projectWallList(ArrayList<Wall> walls) {
+        ArrayList<Wall> projectedWalls = new ArrayList<Wall>();
+        for (Wall wall : walls) {
+            projectedWalls.add(projectWall(wall));
+        }
+        return projectedWalls;
     }
 }

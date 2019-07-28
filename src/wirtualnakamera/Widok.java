@@ -1,20 +1,11 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package wirtualnakamera;
 
 import Models.Edge2D;
 import Models.Edge3D;
 import Models.Point2D;
 import Models.Point3D;
-
 import java.util.ArrayList;
 
-/**
- *
- * @author rafal
- */
 public class Widok {
     int wysokosc;
     int szerokosc;

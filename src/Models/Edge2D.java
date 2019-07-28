@@ -23,32 +23,16 @@ public class Edge2D {
         return point1;
     }
 
-    public void setPoint1(Point2D point1) {
-        this.point1 = point1;
-    }
-
     public Point2D getPoint2() {
         return point2;
-    }
-
-    public void setPoint2(Point2D point2) {
-        this.point2 = point2;
     }
 
     public int getWallNumber1() {
         return wallNumber1;
     }
 
-    public void setWallNumber1(int wallNumber1) {
-        this.wallNumber1 = wallNumber1;
-    }
-
     public int getWallNumber2() {
         return wallNumber2;
-    }
-
-    public void setWallNumber2(int wallNumber2) {
-        this.wallNumber2 = wallNumber2;
     }
 
     @Override
